@@ -1,0 +1,119 @@
+.github-button {
+    margin: 30px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000; /* black text */
+    background-color: #ffffff; /* white button */
+    border: 1px solid #ccc; /* subtle border */
+    border-radius: 6px;
+    text-decoration: none; /* remove underline */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    max-width: 190px;
+    height: 36px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* depth */
+}
+
+.github-button:hover {
+    background-color: #f0f0f0; /* light gray hover */
+    box-shadow: 0 0 0 2px #ccc, 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #888, 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.github-button:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Shimmer effect */
+.github-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+    transform: translateX(48px) rotate(12deg);
+    transition: transform 1s ease;
+}
+
+.github-button:hover::before {
+    transform: translateX(-160px) rotate(12deg);
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 1;
+    position: relative;
+}
+
+.github-button span {
+    text-decoration: none; /* remove underline from text */
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.star-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    color: #6b7280; /* gray star icon */
+    transition: color 0.3s ease;
+}
+
+.github-button:hover .star-icon {
+    color: #fcd34d; /* gold star */
+}
+
+.star-count {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, monospace;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #4b5563; /* gray text */
+}
+
+.github-button,
+.github-button *,
+.github-button span {
+    text-decoration: none !important; /* force remove underline */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .star-section {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .star-section {
+        display: flex;
+    }
+}

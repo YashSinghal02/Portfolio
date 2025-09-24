@@ -1,0 +1,138 @@
+/* Paragraphs */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/* Heading */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar container */
+.navbar {position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #030005; 
+  backdrop-filter: blur(12px);
+}
+
+/* Nav list */
+.nav-ul {
+  display: none;
+}
+
+.logo span{
+font-size: 25px;
+font-weight: bold;
+color: white;
+}
+.logo i{
+  font-size: 25px;
+font-weight: bold;
+color: white;
+}
+.logo .lastName{
+  color: #c084fc;
+}
+.bar i{
+  display: flex;
+  cursor: pointer;
+  color: white;
+}
+
+
+@media only screen and (min-width:768px) {
+    /* Nav list */
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  /* display: none; */
+}
+    /* Nav items */
+.nav-li a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover - change color to blue */
+.nav-li a:hover {
+  color: #c084fc; 
+}
+
+/* Underline effect */
+.nav-li a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #c084fc; 
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-li a:hover::before {
+  width: 100%;
+}
+.bar i{
+  display: none;
+}
+.logo span{
+font-size: 20px;
+font-weight: bold;
+color: white;
+}
+.logo i{
+  font-size: 20px;
+font-weight: bold;
+color: white;
+}
+}
+@media only screen and (min-width:800px) {
+.logo span{
+font-size: 22px;
+font-weight: bold;
+color: white;
+}
+.logo i{
+  font-size: 22px;
+font-weight: bold;
+color: white;
+}
+}
+
+@media only screen and (min-width:850px) {
+.logo span{
+font-size: 25px;
+font-weight: bold;
+color: white;
+}
+.logo i{
+  font-size: 25px;
+font-weight: bold;
+color: white;
+}
+}

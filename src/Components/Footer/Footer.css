@@ -1,0 +1,102 @@
+.footer-container {
+    position: relative;
+    background-color: #121212; /* dark footer */
+    color: #fff;
+    padding: 20px 20px 20px 20px;
+    font-family: 'Arial', sans-serif;
+}
+.logo1 span{
+font-size: 30px;
+font-weight: 700;
+color: white;
+}
+.logo1 i{
+  font-size: 30px;
+font-weight: 700;
+color: white;
+}
+.logo1 .lastName{
+  color: #c084fc;
+}
+
+.footer-content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.footer-left h3 {
+    font-size: 1.8rem;
+    color: #c084fc;
+    margin-bottom: 5px;
+}
+
+.footer-left p {
+    color: #d0d0d0;
+}
+
+.footer-center, .footer-right,.footer-left {
+    text-align: center;
+}
+
+.footer-center h4, .footer-right h4 {
+    text-align: center;
+    font-size:30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #f0f0f0;
+}
+
+.footer-center p {
+    margin: 5px 0;
+    color: #d0d0d0;
+    font-size: 17px;
+    text-align: center;
+}
+.footer-center i{
+font-size: 17px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.social-icons a {
+    color: #c084fc;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a855f7;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Responsive layout */
+@media only screen and (min-width: 768px) {
+    .footer-container{
+        padding:10px 10px ;
+        margin-top: 50px;
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: left;
+    }
+}

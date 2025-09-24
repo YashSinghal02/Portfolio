@@ -1,0 +1,92 @@
+  .send-button {
+            position: relative;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #c084fc;
+            border-radius: 12px;
+            color: #fff;
+            font-weight: 900;
+            background: #c084fc;
+            text-transform: uppercase;
+            padding: 14px 22px;
+            z-index: 10;
+            overflow: hidden;
+            transition: all 0.7s ease-in-out;
+            cursor: pointer;
+            font-size: 14px;
+            isolation: isolate;
+        }
+
+        .send-button:hover {
+            color: #c084fc;
+            background: #fff;
+        }
+
+        .send-button:active {
+            transform: scale(0.95);
+            transition-duration: 0s;
+        }
+
+        .send-button:focus {
+            background: #fff;
+            color: #c084fc;
+            outline: none;
+        }
+
+        .send-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: #fff;
+            z-index: -1;
+            aspect-ratio: 1;
+            transition: all 0.7s ease-in-out;
+        }
+
+        .send-button:hover::before {
+            width: 100%;
+            left: 0;
+            transform: translateY(-50%) scale(1.5);
+            transition-duration: 0.7s;
+        }
+
+        .button-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: transform 0.3s ease-in-out;
+        }
+
+      
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .send-icon {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            transition: all 0.7s ease-in-out;
+        }
+
+        .send-button:hover .send-icon {
+            fill: #c084fc;
+            transform: translateX(0);
+        }
+
+        .send-button:active .send-icon,
+        .send-button:focus .send-icon {
+            transform: translateX(384px);
+            transition-duration: 0s;
+            fill: #000;
+        }

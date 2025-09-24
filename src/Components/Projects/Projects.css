@@ -1,0 +1,122 @@
+/* Container for all projects */
+.project-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Individual project card */
+.project-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 390px;
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    border: 2px solid #c084fc;
+    box-shadow: 0 4px 15px rgba(192, 132, 252, 0.3); 
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.project-one:hover {
+    /* transform: translateY(-1px); */
+    box-shadow: 0 8px 15px rgba(192, 132, 252, 0.279);
+}
+
+/* Project image container */
+.project-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-one:hover .project-img img {
+    transform: scale(1.06);
+}
+
+/* Text section */
+.project-txt {
+    padding: 15px;
+    width: 100%;
+}
+
+.project-txt h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.project-txt p {
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #d0d0d0;
+}
+
+/* Badges */
+.badge-flexx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.badge1 {
+    background-color: #c084fc;
+    color: #000;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.badge1:hover {
+    /* background-color: #a855f7;
+    color: #fff; */
+}
+.viewallbtn{
+    margin:20px auto;
+    text-align: center;
+}
+
+/* Buttons */
+.btns-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+@media only screen and (min-width:1000px) {
+    .project-one {
+        width: 305px;
+    }
+}
+@media only screen and (min-width:1079px) {
+    .project-one {
+        width: 330px;
+    }
+}
+@media only screen and (min-width:1200px) {
+    .project-one {
+        width: 390px;
+    }
+}

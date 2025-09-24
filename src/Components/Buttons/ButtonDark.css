@@ -1,0 +1,40 @@
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button-content {
+  position: relative;
+  z-index: 2; /* above the pseudo-element */
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    #af5eff 10.8%,
+    #c084fc 94.3%
+  );
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.475s ease;
+  z-index: 1; /* below content */
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
