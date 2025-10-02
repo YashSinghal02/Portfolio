@@ -56,6 +56,46 @@
   transition: 0s;
 }
 
+/* Active tab styling */
+.Skill-btns.active {
+  background: #c084fc;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.Skill-btns.active:before {
+  background: #a855f7;
+  top: -50%;
+  left: -50%;
+}
+
+/* Tab icon styling */
+.tab-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Tab content animation */
+.tab-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skills section container */
+.skills-section {
+  padding: 20px 0;
+}
+
 /* ====== Tools Section ====== */
 .tools {
   margin-top: 50px;

@@ -1,9 +1,3 @@
-import Frontend from "./Frontend";
-import Frameworks from "./Frameworks";
-import Libraries from "./Libraries";
-import Tools from "./Tools";
-import VersionControl from "./VersionControl";
-import ProgrammingLanguages from "./ProgrammingLanguages";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import js from "../../assets/js.png";
@@ -24,13 +18,6 @@ function AllSkills() {
   return (
     <div>
       <div className="skill-set">
-        {/* <Frontend/>
-        <Frameworks/>
-        <Libraries/>
-        <Tools/>
-        <VersionControl/>
-        <ProgrammingLanguages/> */}
-
         <div className="tools">
           <div className="card1-tool">
             <div className="card1-tool-img">

@@ -5,7 +5,7 @@ import animationData from "../../Animations/AboutAnimation.json";
 function About() {
   return (
     <div className="about-container">
-      <div className="about-heading">
+      <div className="about-heading-1">
         <h2>About Me</h2>
       </div>
 

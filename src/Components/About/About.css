@@ -1,7 +1,19 @@
 .about-heading {
-  color: white;
-  text-align: center;
-  margin: 50px 0;
+color: white;
+    position: relative;
+    text-align: center;
+    margin: 60px 0 50px 0px;
+}
+
+.about-heading-1 {
+color: white;
+    position: relative;
+    text-align: center;
+    margin: 170px 0 50px 0px;
+}
+.about-heading-1 h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
 }
 
 .about-heading h2 {

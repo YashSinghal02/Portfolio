@@ -68,7 +68,7 @@
      color: #c084fc;
 }
 .auto-text h2{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 900;
    
 }
@@ -117,7 +117,13 @@
 .tag-line{
   width: 450px;
 }
-
+.auto-text h2 {
+        font-size: 2.5rem;
+    }
+.auto-devloper-text{
+  min-width: 220px;
+  text-align: left;
+}
 
 }
 
@@ -144,7 +150,9 @@
   border-radius: 50%;
   z-index: 0;
 }
-
+   .auto-text h2 {
+        font-size: 2.5rem;
+    }
 
 }
 
@@ -201,6 +209,9 @@
 .tag-line{
   width: 470px;
 }
+  .auto-text h2 {
+        font-size: 2.5rem;
+    }
 }
 @media only screen and (min-width: 1400px) {
   .bg-circle-center {
@@ -230,4 +241,19 @@
 }
 
 
+}
+
+/* Offset the fixed navbar height so content isn't hidden */
+.home-offset {
+  padding-top: 80px;
+}
+
+/* Ensure in-page anchor links account for the fixed navbar */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* If sections have ids (e.g., #about, #skills), this helps when jumping to them */
+[id] {
+  scroll-margin-top: 80px;
 }

@@ -1,12 +1,16 @@
 import './Home.css'
+// import './Extra.css'
+
 import HomeImg from '../../assets/homeimg.png'
 import ButtonDark from '../Buttons/ButtonDark'
 import SocialMedIcons from '../../SocialMediaIcons/SocialMedIcons'
+// import AutoText from './AutoText'
 // import About from '../About/About'
-
+import { ReactTyped } from "react-typed";
+import AutoText from './AutoText';
 function Home() {
   return (
-    <div>
+    <div id="home" className="home-offset">
       <div className="contaner">
         <div className="bg-circle-center">
           {/* <div className="bg-circle-back"> */}
@@ -20,7 +24,7 @@ function Home() {
           <div className="auto-text">
           <h3>Hi,Myself</h3>
           <h1>Yash Singhal</h1>
-          <h2> And I'm a Devloper</h2>
+         <AutoText/>
         </div>
 
        <div className="home-img">
@@ -30,6 +34,7 @@ function Home() {
        <div className="tag-line">
         <p>Frontend web developer passionate about turning ideas into clean, dynamic, and engaging web experiences, delivering modern, interactive, and scalable websites.</p>
        </div>
+       
 
       
       {/* Socila Media */}

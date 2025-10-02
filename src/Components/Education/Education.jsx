@@ -4,8 +4,12 @@ import isc from "../../assets/isc.png";
 
 function Education() {
   return (
+    
     <div className="education-section">
-      <h2 className="edu-heading">Education</h2>
+        <div className="about-heading">
+        <h2>Education</h2>
+      </div>
+      {/* <h2 className="edu-heading">Education</h2> */}
 
       <div className="educ-flex">
         <div className="college-edu">
