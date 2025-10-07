@@ -63,32 +63,34 @@ color: white;
 
 /* hambuger-hide */
 
-.hambuger-hide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-     background-color:rgb(9 9 9 / 92%);
-    backdrop-filter: blur(15px);
-    width: 290px;
-    position: fixed;
-    height: 100vh;
-    right: 0;
-    top:0;
-    color: white;
-    transition:all .8s linear;
+.hambuger-hide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -300px;   /* slightly more than width */
+  background-color: rgb(9 9 9 / 92%);
+  z-index: 200;
+  transition: right 0.5s ease;
 }
+
 .hambuger-show {
-  right: -16rem;
-    display: none;
+  right: 0;   /* slide in */
 }
+
 
 .backdrop{
     width: 100%;
     height: 100vh;
-    background-color: #ff000042;
-    position: absolute;
-    z-index: -1;
+    background-color: #aa5bf84a;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    z-index: 102;
     display: none;
 }
  .backdrop-show {
@@ -102,9 +104,15 @@ color: white;
         }
         
       .close-menu {
-  display: inline-block;  
+    position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 210; /* above menu */
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease; 
+  color: white;
+  font-size: 22px;
 }
 
 .close-menu:hover {
@@ -150,6 +158,18 @@ color: white;
 .nav-li-cut a:hover::before {
   width: 100%;
 }
+
+.ham-hide-nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    flex-direction: column;
+ padding: 20px 0 0 0;
+}
+
+
 
 
 
