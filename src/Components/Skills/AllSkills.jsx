@@ -21,10 +21,10 @@ function AllSkills() {
       <div className="skill-set">
         <div className="tools">
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -39,10 +39,10 @@ function AllSkills() {
           </motion.div>
           {/* 2 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -57,10 +57,10 @@ function AllSkills() {
           </motion.div>
           {/* 3 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -76,10 +76,10 @@ function AllSkills() {
           {/* 4 */}
 
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -94,10 +94,10 @@ function AllSkills() {
           </motion.div>
           {/* 5 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -112,10 +112,10 @@ function AllSkills() {
           </motion.div>
           {/* 6 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -130,10 +130,10 @@ function AllSkills() {
           </motion.div>
           {/* 5 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -148,10 +148,10 @@ function AllSkills() {
           </motion.div>
           {/* 6*/}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -176,10 +176,10 @@ function AllSkills() {
 
           {/* 8 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -194,10 +194,10 @@ function AllSkills() {
           </motion.div>
           {/* 9 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -212,10 +212,10 @@ function AllSkills() {
           </motion.div>
           {/* 10 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -230,10 +230,10 @@ function AllSkills() {
           </motion.div>
           {/* 11 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
@@ -248,10 +248,10 @@ function AllSkills() {
           </motion.div>
           {/* 12 */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0.5 }}
+            initial={{ scale: 0.8, }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              
 
               transition: { duration: 0.3 },
             }}
