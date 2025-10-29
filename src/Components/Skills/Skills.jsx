@@ -9,20 +9,9 @@ import ProgrammingLanguages from "./ProgrammingLanguages";
 
 function Skills() {
   const [activeTab, setActiveTab] = useState("All");
-
-  const skillTabs = [
-    { id: "All", label: "All", icon: "🌟" },
-    { id: "Frontend", label: "Front-End", icon: "🎨" },
-    { id: "Frameworks", label: "Frameworks", icon: "⚡" },
-    { id: "Libraries", label: "Libraries", icon: "📚" },
-    { id: "Tools", label: "Tools", icon: "🛠️" },
-    { id: "VersionControl", label: "Version Control", icon: "📝" },
-    { id: "ProgrammingLanguages", label: "Programming", icon: "💻" }
-  ];
-
-  const renderSkillComponent = () => {
+    const renderComponent = () => {
     switch (activeTab) {
-      case "All":
+      case "AllSkills":
         return <AllSkills />;
       case "Frontend":
         return <Frontend />;
@@ -34,7 +23,7 @@ function Skills() {
         return <Tools />;
       case "VersionControl":
         return <VersionControl />;
-      case "ProgrammingLanguages":
+        case "ProgrammingLanguages":
         return <ProgrammingLanguages />;
       default:
         return <AllSkills />;
@@ -47,24 +36,69 @@ function Skills() {
         <h2>My Skills</h2>
       </div>
       
-      {/* Tab Navigation */}
+      {/* Simple Tab Buttons */}
       <div className="grp-btns">
-        {skillTabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`Skill-btns ${activeTab === tab.id ? 'active' : ''}`}
-          >
-            <span className="tab-icon">{tab.icon}</span>
-            <span>{tab.label}</span>
-          </button>
-        ))}
+        <button 
+          onClick={() => setActiveTab("All")}
+          className={`Skill-btns ${activeTab === "All" ? 'active' : ''}`}
+        >
+          🌟 All
+        </button>
+        
+        <button 
+          onClick={() => setActiveTab("Frontend")}
+          className={`Skill-btns ${activeTab === "Frontend" ? 'active' : ''}`}
+        >
+          🎨 Front-End
+        </button>
+        
+        <button 
+          onClick={() => setActiveTab("Frameworks")}
+          className={`Skill-btns ${activeTab === "Frameworks" ? 'active' : ''}`}
+        >
+          ⚡ Frameworks
+        </button>
+        
+        <button 
+          onClick={() => setActiveTab("Libraries")}
+          className={`Skill-btns ${activeTab === "Libraries" ? 'active' : ''}`}
+        >
+          📚 Libraries
+        </button>
+        
+        <button 
+          onClick={() => setActiveTab("Tools")}
+          className={`Skill-btns ${activeTab === "Tools" ? 'active' : ''}`}
+        >
+          🛠️ Tools
+        </button>
+        
+        <button 
+          onClick={() => setActiveTab("VersionControl")}
+          className={`Skill-btns ${activeTab === "VersionControl" ? 'active' : ''}`}
+        >
+          📝 Version Control
+        </button>
+        
+        <button 
+          onClick={() => setActiveTab("ProgrammingLanguages")}
+          className={`Skill-btns ${activeTab === "ProgrammingLanguages" ? 'active' : ''}`}
+        >
+          💻 Programming
+        </button>
       </div>
 
-      {/* Tab Content */}
-      <div className="tab-content">
-        {renderSkillComponent()}
-      </div>
+      {/* Show Content Based on Active Tab */}
+      {/* <div className="tab-content">
+        {activeTab === "All" && <AllSkills />}
+        {activeTab === "Frontend" && <Frontend />}
+        {activeTab === "Frameworks" && <Frameworks />}
+        {activeTab === "Libraries" && <Libraries />}
+        {activeTab === "Tools" && <Tools />}
+        {activeTab === "VersionControl" && <VersionControl />}
+        {activeTab === "ProgrammingLanguages" && <ProgrammingLanguages />}
+      </div> */}
+      {renderComponent()}
     </div>
   );
 }

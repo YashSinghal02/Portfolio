@@ -20,7 +20,8 @@ function NavBar() {
       <div className='logo'> 
         <i className="fa-solid fa-less-than"></i>
         <span >Yash <span className='lastName'>Singhal /</span></span>
-        <i className="fa-solid fa-greater-than lastName"></i></div>
+        <i className="fa-solid fa-greater-than lastName"></i>
+        </div>
 
         {/* Hamburger Open */}
          <div className="bar " onClick={toggleHamburgerMenu}>

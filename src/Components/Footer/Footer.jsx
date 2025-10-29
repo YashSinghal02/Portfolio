@@ -1,6 +1,15 @@
 import FooterMedia from '../../SocialMediaIcons/FooterMedia'
 import './Footer.css'
+import { motion, useScroll, useMotionValueEvent, useTransform } from "framer-motion";
 function Footer() {
+   const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (val) => {
+    console.log(val);
+   
+
+  });
+   const opacity = useTransform(scrollY, [0, 100], ["0", "1"]);
   return (
     <div>
      <footer className="footer-container">
@@ -35,6 +44,12 @@ function Footer() {
       <div className="footer-bottom">
         <p>&copy; 2025 Yash Singhal. All rights reserved.</p>
       </div>
+      <motion.button 
+      className="downtotop"
+        style={{
+        opacity}}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <i className="fa-solid fa-up-long"></i></motion.button>
     </footer>
     </div>
   )

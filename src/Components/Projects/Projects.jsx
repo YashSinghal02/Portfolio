@@ -4,11 +4,11 @@ import gym from "../../assets/gym.png";
 import tour from "../../assets/tour.png";
 import education from "../../assets/education.png";
 import samsung from "../../assets/samsung.png";
-import conversion from "../../assets/conversion.png";
+import TechMart from "../../assets/TechMart.png";
 import wheather from "../../assets/wheather.png";
 import HeadProject from "./HeadProject";
 import ButtonDark from "../Buttons/ButtonDark";
-
+import { motion } from 'motion/react';
 function Projects() {
   return (
     <div>
@@ -18,7 +18,61 @@ function Projects() {
       <HeadProject/>
 
       <div className="project-containers">
-        <div className="project-one">
+        {/* 1 */}
+        <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }} 
+          className="project-one">
+          <div className="project-img">
+            <img src={TechMart} alt="" />
+          </div>
+
+          <div className="project-txt">
+            <h2>TechMart</h2>
+            <p>
+              TechMart is your one-stop destination for the latest gadgets and accessories.We bring innovation,quality and unbeatable prices together making technology simple for everyone.
+            </p>
+            <div className="badge-flexx">
+              <span className="badge1">ReactJS</span>
+              <span className="badge1">TailwindCSS</span>
+              <span className="badge1">Redux-Toolkit</span>
+            </div>
+            <div className="btns-flex">
+              <a
+                href="https://github.com/YashSinghal02/TechMart"
+                target="_blank"
+              >
+                <Button1 name="Code" />
+              </a>
+              <a
+                href="https://tech-mart-yash.vercel.app/"
+                target="_blank"
+              >
+                <Button1 name="Live View" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+        {/* 2 */}
+        <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }}  className="project-one">
           <div className="project-img">
             <img src={gym} alt="" />
           </div>
@@ -46,9 +100,19 @@ function Projects() {
               </a>
             </div>
           </div>
-        </div>
-        {/* 2 */}
-        <div className="project-one">
+        </motion.div>
+        {/* 3 */}
+        <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }}  className="project-one">
           <div className="project-img">
             <img src={tour} alt="" />
           </div>
@@ -80,10 +144,25 @@ function Projects() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* 3 */}
-        <div className="project-one">
+      
+      
+      </div>
+
+      <div className="project-containers">
+        {/* 1 */}
+          <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }}  className="project-one">
           <div className="project-img">
             <img src={education} alt="" />
           </div>
@@ -113,11 +192,19 @@ function Projects() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="project-containers">
-        <div className="project-one">
+        </motion.div>
+        {/* 2 */}
+        <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }}  className="project-one">
           <div className="project-img">
             <img src={samsung} alt="" />
           </div>
@@ -146,9 +233,19 @@ function Projects() {
               </a>
             </div>
           </div>
-        </div>
-        {/* 2 */}
-        <div className="project-one">
+        </motion.div>
+        {/* 3 */}
+        <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }}  className="project-one">
           <div className="project-img">
             <img src={wheather} alt="" />
           </div>
@@ -177,47 +274,24 @@ function Projects() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* 3 */}
-        <div className="project-one">
-          <div className="project-img">
-            <img src={conversion} alt="" />
-          </div>
-
-          <div className="project-txt">
-            <h2>Currency Converter</h2>
-            <p>
-              Tool to convert currencies in real-time.Supports multiple
-              currencies with live exchange rates.Simple and easy-to-use
-              interface for quick conversions.
-            </p>
-            <div className="badge-flexx">
-              <span className="badge1">HTML</span>
-              <span className="badge1">CSS</span>
-              <span className="badge1">JavaScript</span>
-            </div>
-            <div className="btns-flex">
-              <a
-                href="https://github.com/YashSinghal02/Currency-Converter"
-                target="_blank"
-              >
-                <Button1 name="Code" />
-              </a>
-              <a
-                href="https://yashsinghal02.github.io/Currency-Converter/"
-                target="_blank"
-              >
-                <Button1 name="Live View" />
-              </a>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
-     <div className="viewallbtn">
+     <motion.div 
+         initial={{scale:0.8,
+            opacity:0.5,
+           
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+           
+            transition:{duration:0.3}
+          }}  className="viewallbtn">
       <a href="https://github.com/YashSinghal02" target="_blank"><ButtonDark name="View All"/></a>
-     </div>
+     </motion.div>
 
     </div>
   );

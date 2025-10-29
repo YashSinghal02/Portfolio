@@ -83,7 +83,22 @@ font-size: 17px;
     color: #ffffff;
     font-size: 0.9rem;
 }
-
+.downtotop{
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color:#a855f7;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+z-index: 10;
+}
+.downtotop i{
+color: black;
+}
 /* Responsive layout */
 @media only screen and (min-width: 768px) {
     .footer-container{

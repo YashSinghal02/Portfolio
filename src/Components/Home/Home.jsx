@@ -1,6 +1,6 @@
 import './Home.css'
 // import './Extra.css'
-
+import { motion } from 'motion/react';
 import HomeImg from '../../assets/homeimg.png'
 import ButtonDark from '../Buttons/ButtonDark'
 import SocialMedIcons from '../../SocialMediaIcons/SocialMedIcons'
@@ -10,7 +10,16 @@ import { ReactTyped } from "react-typed";
 import AutoText from './AutoText';
 function Home() {
   return (
-    <div id="home" className="home-offset">
+    <motion.div
+     initial={{scale:0.8,
+            opacity:0.5,
+          }}
+       whileInView={{
+            scale:1,
+            opacity:1,
+            transition:{duration:0.2}
+          }}
+    id="home" className="home-offset">
       <div className="contaner">
         <div className="bg-circle-center">
           {/* <div className="bg-circle-back"> */}
@@ -50,7 +59,7 @@ function Home() {
 
       </div>
       {/* <About/> */}
-    </div>
+    </motion.div>
   )
 }
 
