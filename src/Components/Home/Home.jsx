@@ -12,11 +12,11 @@ function Home() {
   return (
     <motion.div
      initial={{scale:0.8,
-            opacity:0.5,
+        
           }}
        whileInView={{
             scale:1,
-            opacity:1,
+            
             transition:{duration:0.2}
           }}
     id="home" className="home-offset">

@@ -15,11 +15,11 @@ function About() {
       className="about-flex">
         <motion.div 
        initial={{scale:0.8,
-            opacity:0.5,
+        
           }}
        whileInView={{
             scale:1,
-            opacity:1,
+           
             transition:{duration:0.3}
           }}
            className="about-animation" style={{ width: 350, height: 300,  transform: "scaleX(-1)"}}>
@@ -29,11 +29,11 @@ function About() {
         <motion.div 
        initial={{scale:0.8,
             // translateX:-400,
-            opacity:0.5,
+        
           }}
        whileInView={{
             scale:1,
-            opacity:1,
+           
             // translateX:0,
             transition:{duration:0.5}
           }}

@@ -9,10 +9,10 @@ function ProgrammingLanguages() {
     <div>
       <div className="tools">
         <motion.div
-          initial={{ scale: 0.8, opacity: 0.5 }}
+          initial={{ scale: 0.8,  }}
           whileInView={{
             scale: 1,
-            opacity: 1,
+            
 
             transition: { duration: 0.3 },
           }}
@@ -27,10 +27,10 @@ function ProgrammingLanguages() {
         </motion.div>
         {/* 2 */}
         <motion.div
-          initial={{ scale: 0.8, opacity: 0.5 }}
+          initial={{ scale: 0.8,  }}
           whileInView={{
             scale: 1,
-            opacity: 1,
+            
 
             transition: { duration: 0.3 },
           }}
@@ -44,10 +44,10 @@ function ProgrammingLanguages() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ scale: 0.8, opacity: 0.5 }}
+          initial={{ scale: 0.8,  }}
           whileInView={{
             scale: 1,
-            opacity: 1,
+            
 
             transition: { duration: 0.3 },
           }}

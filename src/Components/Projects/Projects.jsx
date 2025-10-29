@@ -8,29 +8,26 @@ import TechMart from "../../assets/TechMart.png";
 import wheather from "../../assets/wheather.png";
 import HeadProject from "./HeadProject";
 import ButtonDark from "../Buttons/ButtonDark";
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 function Projects() {
   return (
     <div>
-  <div className="about-heading">
+      <div className="about-heading">
         <h2>My Projects</h2>
       </div>
-      <HeadProject/>
+      <HeadProject />
 
       <div className="project-containers">
         {/* 1 */}
-        <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }} 
-          className="project-one">
+          className="project-one"
+        >
           <div className="project-img">
             <img src={TechMart} alt="" />
           </div>
@@ -38,7 +35,9 @@ function Projects() {
           <div className="project-txt">
             <h2>TechMart</h2>
             <p>
-              TechMart is your one-stop destination for the latest gadgets and accessories.We bring innovation,quality and unbeatable prices together making technology simple for everyone.
+              TechMart is your one-stop destination for the latest gadgets and
+              accessories.We bring innovation,quality and unbeatable prices
+              together making technology simple for everyone.
             </p>
             <div className="badge-flexx">
               <span className="badge1">ReactJS</span>
@@ -52,27 +51,22 @@ function Projects() {
               >
                 <Button1 name="Code" />
               </a>
-              <a
-                href="https://tech-mart-yash.vercel.app/"
-                target="_blank"
-              >
+              <a href="https://tech-mart-yash.vercel.app/" target="_blank">
                 <Button1 name="Live View" />
               </a>
             </div>
           </div>
         </motion.div>
         {/* 2 */}
-        <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}  className="project-one">
+          className="project-one"
+        >
           <div className="project-img">
             <img src={gym} alt="" />
           </div>
@@ -102,17 +96,15 @@ function Projects() {
           </div>
         </motion.div>
         {/* 3 */}
-        <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}  className="project-one">
+          className="project-one"
+        >
           <div className="project-img">
             <img src={tour} alt="" />
           </div>
@@ -145,24 +137,19 @@ function Projects() {
             </div>
           </div>
         </motion.div>
-
-      
-      
       </div>
 
       <div className="project-containers">
         {/* 1 */}
-          <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}  className="project-one">
+          className="project-one"
+        >
           <div className="project-img">
             <img src={education} alt="" />
           </div>
@@ -194,17 +181,15 @@ function Projects() {
           </div>
         </motion.div>
         {/* 2 */}
-        <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}  className="project-one">
+          className="project-one"
+        >
           <div className="project-img">
             <img src={samsung} alt="" />
           </div>
@@ -235,17 +220,15 @@ function Projects() {
           </div>
         </motion.div>
         {/* 3 */}
-        <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}  className="project-one">
+          className="project-one"
+        >
           <div className="project-img">
             <img src={wheather} alt="" />
           </div>
@@ -275,24 +258,21 @@ function Projects() {
             </div>
           </div>
         </motion.div>
-
-        
       </div>
 
-     <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
-          }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}  className="viewallbtn">
-      <a href="https://github.com/YashSinghal02" target="_blank"><ButtonDark name="View All"/></a>
-     </motion.div>
+      <motion.div
+        initial={{ scale: 0.8 }}
+        whileInView={{
+          scale: 1,
 
+          transition: { duration: 0.3 },
+        }}
+        className="viewallbtn"
+      >
+        <a href="https://github.com/YashSinghal02" target="_blank">
+          <ButtonDark name="View All" />
+        </a>
+      </motion.div>
     </div>
   );
 }

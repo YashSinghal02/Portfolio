@@ -1,30 +1,26 @@
 import "./Education.css";
 import GRD from "../../assets/grd.png";
 import isc from "../../assets/isc.png";
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 
 function Education() {
   return (
-    
     <div className="education-section">
-        <div className="about-heading">
+      <div className="about-heading">
         <h2>Education</h2>
       </div>
       {/* <h2 className="edu-heading">Education</h2> */}
 
       <div className="educ-flex">
-        <motion.div 
-         initial={{scale:0.8,
-            opacity:0.5,
-           
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-           
-            transition:{duration:0.3}
-          }}
-        className="college-edu">
+          className="college-edu"
+        >
           <div className="college-edu-img">
             <img src={GRD} alt="GRD Institute" />
           </div>
@@ -36,17 +32,14 @@ function Education() {
         </motion.div>
 
         <motion.div
-         initial={{scale:0.8,
-            opacity:0.5,
-             
+          initial={{ scale: 0.8 }}
+          whileInView={{
+            scale: 1,
+
+            transition: { duration: 0.3 },
           }}
-       whileInView={{
-            scale:1,
-            opacity:1,
-            
-            transition:{duration:0.3}
-          }}
-        className="college-edu">
+          className="college-edu"
+        >
           <div className="college-edu-img">
             <img src={isc} alt="Constancia School" />
           </div>
