@@ -49,11 +49,11 @@ function NavBar() {
     <ul className="ham-hide-nav-ul">
     
     <li className="nav-li-cut"><a href="#home">Home</a></li>
-        <li className="nav-li-cut"><a href="#about">About</a></li>
-        <li className="nav-li-cut"><a href="#education">Education</a></li>
-        <li className="nav-li-cut"><a href="#skills">Skills</a></li>
-        <li className="nav-li-cut"><a href="#projects">Projects</a></li>
-        <li className="nav-li-cut"><a href="#contact">Contact</a></li>
+        <li className="nav-li-cut"><a onClick={toggleHamburgerMenu} href="#about">About</a></li>
+        <li className="nav-li-cut"><a onClick={toggleHamburgerMenu} href="#education">Education</a></li>
+        <li className="nav-li-cut"><a onClick={toggleHamburgerMenu} href="#skills">Skills</a></li>
+        <li className="nav-li-cut"><a onClick={toggleHamburgerMenu} href="#projects">Projects</a></li>
+        <li className="nav-li-cut"><a onClick={toggleHamburgerMenu} href="#contact">Contact</a></li>
 
     </ul>
 </div>
