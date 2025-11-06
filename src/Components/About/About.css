@@ -34,13 +34,19 @@ color: white;
   color: white;
   margin-bottom: 20px;
   line-height: 1.5;
-  text-align: justify 
+  text-align: center 
 }
 .about-animation{
     width: 300px;
     height: 300px;
     transform: scaleX(-1);
     
+}
+
+@media (min-width: 420px) {
+.about-text p{
+  text-align: justify;
+}
 }
 
 @media (min-width: 768px) {
