@@ -78,14 +78,22 @@
 }
 
 .badge1 {
-    background-color: #c084fc;
-    color: #000;
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(192, 132, 252, 0.12);
+    color: #c084fc;
+
+    border: 1px solid rgba(192, 132, 252, 0.45);
+    border-radius: 999px;
+
+    padding: 6px 14px;
+    font-size: 13px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    /* letter-spacing: 0.4px; */
 }
+
 
 .badge1:hover {
     /* background-color: #a855f7;
