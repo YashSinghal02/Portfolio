@@ -1,67 +1,59 @@
-import phython from "../../assets/python.png";
+import python from "../../assets/python.png";
 import java from "../../assets/java.png";
-import "./Skills.css";
 import js from "../../assets/js.png";
+import "./Skills.css";
 import { motion } from "motion/react";
 
 function ProgrammingLanguages() {
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const languages = [
+    { img: python, name: "Python" },
+    { img: java, name: "Java" },
+    { img: js, name: "JavaScript" },
+  ];
+
   return (
-    <div>
-      <div className="tools">
+    <motion.div
+      className="tools"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {languages.map((lang) => (
         <motion.div
-          initial={{ scale: 0.8,  }}
-          whileInView={{
-            scale: 1,
-            
-
-            transition: { duration: 0.3 },
-          }}
+          key={lang.name}
+          variants={item}
           className="card1-tool"
         >
           <div className="card1-tool-img">
-            <img src={phython} alt="" />
+            <img src={lang.img} alt={lang.name} />
           </div>
           <div className="card1-tool-txt">
-            <p>Phython</p>
+            <p>{lang.name}</p>
           </div>
         </motion.div>
-        {/* 2 */}
-        <motion.div
-          initial={{ scale: 0.8,  }}
-          whileInView={{
-            scale: 1,
-            
-
-            transition: { duration: 0.3 },
-          }}
-          className="card1-tool"
-        >
-          <div className="card1-tool-img">
-            <img src={java} alt="" />
-          </div>
-          <div className="card1-tool-txt">
-            <p>Java </p>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ scale: 0.8,  }}
-          whileInView={{
-            scale: 1,
-            
-
-            transition: { duration: 0.3 },
-          }}
-          className="card1-tool"
-        >
-          <div className="card1-tool-img">
-            <img src={js} alt="" />
-          </div>
-          <div className="card1-tool-txt">
-            <p>JavaScript</p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+      ))}
+    </motion.div>
   );
 }
 

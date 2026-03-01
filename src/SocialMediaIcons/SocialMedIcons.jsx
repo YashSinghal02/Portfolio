@@ -8,10 +8,10 @@ function SocialMedIcons() {
      
      <div className="social-div">
 
-     <a href={Resume} target="_blank"><ButtonDark name="Resume"/></a>
+     <a href={Resume} target="_blank" rel="noopener noreferrer"><ButtonDark name="Resume" /></a>
 
         <div className="social-button linkedin">
-            <a href="https://www.linkedin.com/in/yashsinghal-fullstackdeveloper" target="_blank">
+            <a href="https://www.linkedin.com/in/yashsinghal01" target="_blank" rel="noopener noreferrer">
             <button>
                 <div className="floater"></div>
                 <div className="icon">
@@ -24,7 +24,7 @@ function SocialMedIcons() {
         </div>
 
         <div className="social-button github">
-            <a href="https://github.com/YashSinghal02" target="_blank">
+            <a href="https://github.com/YashSinghal02" target="_blank" rel="noopener noreferrer">
             <button>
                 <div className="floater"></div>
                 <div className="icon">

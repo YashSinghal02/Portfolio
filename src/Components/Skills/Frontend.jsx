@@ -3,65 +3,57 @@ import css from "../../assets/css.png";
 import js from "../../assets/js.png";
 import "./Skills.css";
 import { motion } from "motion/react";
+
 function Frontend() {
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const frontendSkills = [
+    { img: html, name: "HTML" },
+    { img: css, name: "CSS" },
+    { img: js, name: "JavaScript" },
+  ];
+
   return (
-    <div>
-      <div className="tools">
+    <motion.div
+      className="tools"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {frontendSkills.map((skill) => (
         <motion.div
-          initial={{ scale: 0.8, }}
-          whileInView={{
-            scale: 1,
-           
-
-            transition: { duration: 0.3 },
-          }}
+          key={skill.name}
+          variants={item}
           className="card1-tool"
         >
           <div className="card1-tool-img">
-            <img src={html} alt="" />
+            <img src={skill.img} alt={skill.name} />
           </div>
           <div className="card1-tool-txt">
-            <p>HTML</p>
+            <p>{skill.name}</p>
           </div>
         </motion.div>
-        {/* 2 */}
-        <motion.div
-          initial={{ scale: 0.8, }}
-          whileInView={{
-            scale: 1,
-           
-
-            transition: { duration: 0.3 },
-          }}
-          className="card1-tool"
-        >
-          <div className="card1-tool-img">
-            <img src={css} alt="" />
-          </div>
-          <div className="card1-tool-txt">
-            <p>CSS </p>
-          </div>
-        </motion.div>
-        {/* 3 */}
-        <motion.div
-          initial={{ scale: 0.8, }}
-          whileInView={{
-            scale: 1,
-           
-
-            transition: { duration: 0.3 },
-          }}
-          className="card1-tool"
-        >
-          <div className="card1-tool-img">
-            <img src={js} alt="" />
-          </div>
-          <div className="card1-tool-txt">
-            <p>JavaScript</p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+      ))}
+    </motion.div>
   );
 }
 

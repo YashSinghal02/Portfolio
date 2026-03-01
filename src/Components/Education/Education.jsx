@@ -4,21 +4,64 @@ import isc from "../../assets/isc.png";
 import { motion } from "motion/react";
 
 function Education() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <div className="education-section">
-      <div className="about-heading">
+      <motion.div
+        className="about-heading"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <h2>Education</h2>
-      </div>
+      </motion.div>
       {/* <h2 className="edu-heading">Education</h2> */}
 
-      <div className="educ-flex">
+      <motion.div
+        className="educ-flex"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <motion.div
-          initial={{ scale: 0.8 }}
-          whileInView={{
-            scale: 1,
-
-            transition: { duration: 0.3 },
-          }}
+          variants={fadeLeft}
           className="college-edu"
         >
           <div className="college-edu-img">
@@ -32,12 +75,7 @@ function Education() {
         </motion.div>
 
         <motion.div
-          initial={{ scale: 0.8 }}
-          whileInView={{
-            scale: 1,
-
-            transition: { duration: 0.3 },
-          }}
+          variants={fadeRight}
           className="college-edu"
         >
           <div className="college-edu-img">
@@ -50,7 +88,7 @@ function Education() {
             <p>2020 - 2022</p>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 }

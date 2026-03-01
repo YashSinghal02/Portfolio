@@ -27,7 +27,13 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #030005; 
+  /* background-color: #030005;  */
+  background: linear-gradient(
+  to right,
+  rgba(0, 0, 0, 0.415),
+  rgba(0, 0, 0, 0.2)
+);
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
 }
 
@@ -58,6 +64,10 @@ color: white;
   display: flex;
   cursor: pointer;
   color: white;
+  
+}
+.bar svg{
+  font-size: 25px;
 }
 
 
@@ -219,6 +229,9 @@ color: white;
 }
 .bar i{
   display: none;
+}
+.bar svg{
+    display: none;
 }
 .logo span{
 font-size: 20px;

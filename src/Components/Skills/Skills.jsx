@@ -6,10 +6,11 @@ import Libraries from "./Libraries";
 import Tools from "./Tools";
 import VersionControl from "./VersionControl";
 import ProgrammingLanguages from "./ProgrammingLanguages";
+import { motion } from "motion/react";
 
 function Skills() {
-  const [activeTab, setActiveTab] = useState("All");
-    const renderComponent = () => {
+  const [activeTab, setActiveTab] = useState("AllSkills");
+  const renderComponent = () => {
     switch (activeTab) {
       case "AllSkills":
         return <AllSkills />;
@@ -23,69 +24,112 @@ function Skills() {
         return <Tools />;
       case "VersionControl":
         return <VersionControl />;
-        case "ProgrammingLanguages":
+      case "ProgrammingLanguages":
         return <ProgrammingLanguages />;
       default:
         return <AllSkills />;
     }
   };
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
   return (
     <div className="skills-section">
-      <div className="about-heading">
+      <motion.div
+        className="about-heading"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <h2>My Skills</h2>
-      </div>
-      
+      </motion.div>
+
       {/* Simple Tab Buttons */}
       <div className="grp-btns">
-        <button 
-          onClick={() => setActiveTab("All")}
-          className={`Skill-btns ${activeTab === "All" ? 'active' : ''}`}
+        <motion.button
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          onClick={() => setActiveTab("AllSkills")}
+          className={`Skill-btns ${activeTab === "AllSkills" ? "active" : ""}`}
         >
-          🌟 All
-        </button>
-        
-        <button 
+          All
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
           onClick={() => setActiveTab("Frontend")}
-          className={`Skill-btns ${activeTab === "Frontend" ? 'active' : ''}`}
+          className={`Skill-btns ${activeTab === "Frontend" ? "active" : ""}`}
         >
-          🎨 Front-End
-        </button>
-        
-        <button 
+          Front-End
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
           onClick={() => setActiveTab("Frameworks")}
-          className={`Skill-btns ${activeTab === "Frameworks" ? 'active' : ''}`}
+          className={`Skill-btns ${activeTab === "Frameworks" ? "active" : ""}`}
         >
-          ⚡ Frameworks
-        </button>
-        
-        <button 
+          Frameworks
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }}
           onClick={() => setActiveTab("Libraries")}
-          className={`Skill-btns ${activeTab === "Libraries" ? 'active' : ''}`}
+          className={`Skill-btns ${activeTab === "Libraries" ? "active" : ""}`}
         >
-          📚 Libraries
-        </button>
-        
-        <button 
+          Libraries
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
           onClick={() => setActiveTab("Tools")}
-          className={`Skill-btns ${activeTab === "Tools" ? 'active' : ''}`}
+          className={`Skill-btns ${activeTab === "Tools" ? "active" : ""}`}
         >
-          🛠️ Tools
-        </button>
-        
-        <button 
+          Tools
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          viewport={{ once: true }}
           onClick={() => setActiveTab("VersionControl")}
-          className={`Skill-btns ${activeTab === "VersionControl" ? 'active' : ''}`}
+          className={`Skill-btns ${activeTab === "VersionControl" ? "active" : ""}`}
         >
-          📝 Version Control
-        </button>
-        
-        <button 
+          Version Control
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          viewport={{ once: true }}
           onClick={() => setActiveTab("ProgrammingLanguages")}
-          className={`Skill-btns ${activeTab === "ProgrammingLanguages" ? 'active' : ''}`}
+          className={`Skill-btns ${activeTab === "ProgrammingLanguages" ? "active" : ""}`}
         >
-          💻 Programming
-        </button>
+          Programming
+        </motion.button>
       </div>
 
       {/* Show Content Based on Active Tab */}
@@ -103,4 +147,4 @@ function Skills() {
   );
 }
 
-export default Skills
+export default Skills;

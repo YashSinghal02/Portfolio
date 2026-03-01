@@ -1,6 +1,8 @@
 import './NavBar.css';
 import Logo from '../../assets/logo.png';
 import { useState } from "react";
+import { CgMenuGridO } from "react-icons/cg";
+
 
 function NavBar() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -25,7 +27,9 @@ function NavBar() {
 
         {/* Hamburger Open */}
          <div className="bar " onClick={toggleHamburgerMenu}>
-        <i className="fa-solid fa-bars"></i>
+        {/* <i className="fa-solid fa-bars"></i> */}
+        <CgMenuGridO style={{color:"white"}}/>
+
       </div>
       
       {/* Lists Visible On Desktop */}

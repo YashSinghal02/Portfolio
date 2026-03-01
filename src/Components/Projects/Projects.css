@@ -6,6 +6,7 @@
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
+    
 }
 
 /* Individual project card */
@@ -16,16 +17,17 @@
     width: 390px;
     background-color: #1e1e1e; 
     border-radius: 10px;
-    border: 2px solid #c084fc;
-    box-shadow: 0 4px 15px rgba(192, 132, 252, 0.3); 
+    border: 1.5px solid #c084fce4;
+    box-shadow: 0 4px 15px rgba(192, 132, 252, 0.185); 
     overflow: hidden;
     transition: all 0.3s ease;
     color: #ffffff;
+      transform-style: preserve-3d;
+
 }
 
 .project-one:hover {
-    /* transform: translateY(-1px); */
-    box-shadow: 0 8px 15px rgba(192, 132, 252, 0.279);
+    box-shadow: 0 8px 15px rgba(192, 132, 252, 0.112);
 }
 
 /* Project image container */

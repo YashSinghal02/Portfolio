@@ -4,46 +4,54 @@ import "./Skills.css";
 import { motion } from "motion/react";
 
 function Frameworks() {
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const frameworks = [
+    { img: Bootsrap, name: "Bootstrap" },
+    { img: Tailwind, name: "Tailwind" },
+  ];
+
   return (
-    <div>
-      <div className="tools">
+    <motion.div
+      className="tools"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {frameworks.map((framework) => (
         <motion.div
-          initial={{ scale: 0.8, }}
-          whileInView={{
-            scale: 1,
-           
-
-            transition: { duration: 0.3 },
-          }}
+          key={framework.name}
+          variants={item}
           className="card1-tool"
         >
           <div className="card1-tool-img">
-            <img src={Bootsrap} alt="" />
+            <img src={framework.img} alt={framework.name} />
           </div>
           <div className="card1-tool-txt">
-            <p>Bootstrap</p>
+            <p>{framework.name}</p>
           </div>
         </motion.div>
-        {/* 2 */}
-        <motion.div
-          initial={{ scale: 0.8, }}
-          whileInView={{
-            scale: 1,
-           
-
-            transition: { duration: 0.3 },
-          }}
-          className="card1-tool"
-        >
-          <div className="card1-tool-img">
-            <img src={Tailwind} alt="" />
-          </div>
-          <div className="card1-tool-txt">
-            <p>Tailwind </p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+      ))}
+    </motion.div>
   );
 }
 

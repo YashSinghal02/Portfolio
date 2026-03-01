@@ -3,6 +3,32 @@ import "./Contact.css";
 import { motion } from "motion/react";
 import { useForm } from "react-hook-form";
 function Contact() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+   const fadeLeft = {
+  hidden: { opacity: 0, x: -80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: "easeOut", delay: 0.2 }
+  }
+};
   const {
     register,
     handleSubmit,
@@ -17,17 +43,20 @@ function Contact() {
   }
   return (
     <div>
-      <div className="about-heading">
+      <motion.div className="about-heading"
+      variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <h2>Get in Touch</h2>
-      </div>
+      </motion.div>
       <div className="contact-flex">
         <motion.div
-          initial={{ scale: 0.8 }}
-          whileInView={{
-            scale: 1,
-
-            transition: { duration: 0.3 },
-          }}
+          variants={fadeLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }} 
           className="form-txt"
         >
           <h2>Have Any Questions?</h2>
@@ -53,12 +82,10 @@ function Contact() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ scale: 0.8 }}
-          whileInView={{
-            scale: 1,
-
-            transition: { duration: 0.3 },
-          }}
+         variants={fadeRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           className="form-app"
         >
           <form onSubmit={handleSubmit(onSubmit)}>
