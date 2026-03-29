@@ -7,6 +7,7 @@ import Tools from "./Tools";
 import VersionControl from "./VersionControl";
 import ProgrammingLanguages from "./ProgrammingLanguages";
 import { motion } from "motion/react";
+import Backend from "./Backend";
 
 function Skills() {
   const [activeTab, setActiveTab] = useState("AllSkills");
@@ -16,6 +17,8 @@ function Skills() {
         return <AllSkills />;
       case "Frontend":
         return <Frontend />;
+        case "Backend":
+        return <Backend/>;
       case "Frameworks":
         return <Frameworks />;
       case "Libraries":
@@ -26,6 +29,7 @@ function Skills() {
         return <VersionControl />;
       case "ProgrammingLanguages":
         return <ProgrammingLanguages />;
+        
       default:
         return <AllSkills />;
     }
@@ -77,6 +81,17 @@ function Skills() {
         </motion.button>
 
         <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          viewport={{ once: true }}
+          onClick={() => setActiveTab("Backend")}
+          className={`Skill-btns ${activeTab === "Backend" ? "active" : ""}`}
+        >
+          Backend
+        </motion.button>
+
+        <motion.button
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -119,6 +134,8 @@ function Skills() {
         >
           Version Control
         </motion.button>
+
+        
 
         <motion.button
           initial={{ opacity: 0, x: -20 }}

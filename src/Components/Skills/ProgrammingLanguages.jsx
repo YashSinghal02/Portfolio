@@ -26,7 +26,7 @@ function ProgrammingLanguages() {
   };
 
   const languages = [
-    { img: python, name: "Python" },
+    // { img: python, name: "Python" },
     { img: java, name: "Java" },
     { img: js, name: "JavaScript" },
   ];

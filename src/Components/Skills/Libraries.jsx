@@ -1,6 +1,7 @@
 import mui from "../../assets/mui.png";
 import redux from "../../assets/redux.png";
 import reactLogo from "../../assets/React.png";
+import cloudinary from "../../assets/cloudinary.webp";
 import framer from "../../assets/frmaer.png";
 import "./Skills.css";
 import { motion } from "motion/react";
@@ -29,8 +30,9 @@ function Libraries() {
   const libraries = [
     { img: reactLogo, name: "React" },
     { img: redux, name: "Redux" },
-    { img: mui, name: "MUI" },
+    // { img: mui, name: "MUI" },
     { img: framer, name: "Motion" },
+     { img: cloudinary, name: "Cloudinary" },
   ];
 
   return (

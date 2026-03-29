@@ -3,7 +3,7 @@ import HeadProject from "./HeadProject";
 import ButtonDark from "../Buttons/ButtonDark";
 import Button1 from "../Buttons/ButtonDark";
 import { motion } from "motion/react";
-
+import HireBase from "../../assets/HireBase.png";
 import gym from "../../assets/gym.png";
 import tour from "../../assets/tour.png";
 import education from "../../assets/education.png";
@@ -55,62 +55,62 @@ const item = {
 };
   /* ================= Projects Data ================= */
 
-  const projects = [
-    {
-      title: "TechMart",
-      image: TechMart,
-      description:
-        "TechMart is your one-stop destination for the latest gadgets and accessories. We bring innovation, quality, and unbeatable prices together — making technology simple for everyone.",
-      tech: ["ReactJS", "TailwindCSS", "Redux Toolkit"],
-      code: "https://github.com/YashSinghal02/TechMart",
-      live: "https://tech-mart-yash.vercel.app/",
-    },
-    {
-      title: "Strength Lab",
-      image: gym,
-      description:
-        "Gym website with class schedules and workouts. Book classes, track progress, and read fitness blogs with an easy-to-use interface for a complete fitness experience.",
-      tech: ["ReactJS", "Bootstrap"],
-      code: "https://github.com/YashSinghal02/Gym-Strength-Lab",
-      live: "https://strengthlabgym.netlify.app/",
-    },
-    {
-      title: "Ready To Go",
-      image: tour,
-      description:
-        "Travel website offering various tour packages. Explore destinations, book trips, and view special offers with a seamless and user-friendly experience.",
-      tech: ["Bootstrap", "JavaScript", "jQuery"],
-      code: "https://github.com/YashSinghal02/Tour-Travel-Ready-ToGo-",
-      live: "https://yashsinghal02.github.io/Tour-Travel-Ready-ToGo-/",
-    },
-    {
-      title: "Learning Platform",
-      image: education,
-      description:
-        "An educational platform offering courses and interactive lessons designed to boost skills and knowledge efficiently.",
-      tech: ["Bootstrap", "JavaScript"],
-      code: "https://github.com/YashSinghal02/Learning-Platform",
-      live: "https://yashsinghal02.github.io/Learning-Platform/",
-    },
-    {
-      title: "Samsung Clone",
-      image: samsung,
-      description:
-        "E-commerce website replicating Samsung’s online store. Browse products, explore offers, and enjoy a clean shopping interface.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      code: "https://github.com/YashSinghal02/Sam",
-      live: "https://ssamsunggclonebyyash.netlify.app/",
-    },
-    {
-      title: "Weather App",
-      image: wheather,
-      description:
-        "Real-time weather app displaying temperature, humidity, and forecasts for any location with a clean and simple UI.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      code: "https://github.com/YashSinghal02/Weather-App",
-      live: "https://weather-app-by-yash.vercel.app/",
-    },
-  ];
+ const projects = [
+  {
+    title: "HireBase",
+    image: HireBase,
+    description:
+      "A full-stack MERN job portal built to simulate real-world hiring workflows. Features secure authentication, role-based dashboards, job posting, and application tracking with a scalable architecture.",
+    tech: ["ReactJS", "Node.js", "Express.js", "MongoDB"],
+    code: "https://github.com/YashSinghal02/HireBase-Frontend",
+    live: "https://hirebase-app.vercel.app/",
+  },
+  {
+    title: "TechMart",
+    image: TechMart,
+    description:
+      "A modern e-commerce frontend focused on performance and user experience. Includes product browsing, dynamic cart management, state handling with Redux Toolkit, and responsive UI design for seamless shopping across devices.",
+    tech: ["ReactJS", "TailwindCSS", "Redux Toolkit"],
+    code: "https://github.com/YashSinghal02/TechMart",
+    live: "https://tech-mart-yash.vercel.app/",
+  },
+  {
+    title: "Strength Lab",
+    image: gym,
+    description:
+      "A responsive fitness website showcasing gym services, workout programs, and class schedules. Built with interactive UI sections and mobile-first design to enhance user engagement and accessibility.",
+    tech: ["ReactJS", "Bootstrap"],
+    code: "https://github.com/YashSinghal02/Gym-Strength-Lab",
+    live: "https://strengthlabgym.netlify.app/",
+  },
+  {
+    title: "Ready To Go",
+    image: tour,
+    description:
+      "A travel booking website offering curated tour packages with destination exploration, pricing details, and user-friendly navigation. Designed to provide a smooth browsing and booking experience.",
+    tech: ["Bootstrap", "JavaScript", "jQuery"],
+    code: "https://github.com/YashSinghal02/Tour-Travel-Ready-ToGo-",
+    live: "https://yashsinghal02.github.io/Tour-Travel-Ready-ToGo-/",
+  },
+  {
+    title: "Learning Platform",
+    image: education,
+    description:
+      "An educational platform delivering structured learning content with interactive UI. Focused on improving accessibility and engagement for users looking to enhance their skills online.",
+    tech: ["HTML", "CSS","Bootstrap", "JavaScript"],
+    code: "https://github.com/YashSinghal02/Learning-Platform",
+    live: "https://yashsinghal02.github.io/Learning-Platform/",
+  },
+  {
+    title: "Samsung Clone",
+    image: samsung,
+    description:
+      "A frontend clone of Samsung’s official website, built to replicate real-world UI/UX patterns. Focused on layout precision, responsiveness, and clean design implementation.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    code: "https://github.com/YashSinghal02/Sam",
+    live: "https://ssamsunggclonebyyash.netlify.app/",
+  },
+];
 
   /* ================= Component ================= */
 

@@ -1,7 +1,8 @@
 import VScode from "../../assets/vscode.png";
 import IntelliJIDEA from "../../assets/IntelliJIDEA.png";
-import Jupyter from "../../assets/Jupyter.png";
-import Eclipse from "../../assets/Eclipse.png";
+import thunderclient from "../../assets/thunderclient.png";
+import postman from "../../assets/postman.png";
+import adobephotshop from "../../assets/adobephotshop.png";
 import "./Skills.css";
 import { motion } from "motion/react";
 
@@ -30,8 +31,9 @@ function Tools() {
     { img: VScode, name: "VS Code" },
     { img: IntelliJIDEA, name: "IntelliJ IDEA" },
     // Uncomment if you want to use them
-    // { img: Jupyter, name: "Jupyter" },
-    // { img: Eclipse, name: "Eclipse" },
+    { img: postman, name: "Postman" },
+    { img: thunderclient, name: "Thunder" },
+    { img: adobephotshop, name: "Photoshop " },
   ];
 
   return (

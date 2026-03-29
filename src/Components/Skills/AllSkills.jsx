@@ -11,12 +11,20 @@ import python from "../../assets/python.png";
 import java from "../../assets/java.png";
 import git from "../../assets/git.png";
 import github from "../../assets/github.png";
+import Bootsrap from "../../assets/bootstrap.png";
+import Tailwind from "../../assets/Tailwind.png";
+import cloudinary from "../../assets/cloudinary.webp";
+import nodejs from "../../assets/nodejs.png";
+import expressjs from "../../assets/expressjs.jpg";
+import mongodb from "../../assets/mongodb.png";
+import thunderclient from "../../assets/thunderclient.png";
+import postman from "../../assets/postman.png";
+import adobephotshop from "../../assets/adobephotshop.png";
 
 import "./Skills.css";
 import { motion } from "motion/react";
 
 function AllSkills() {
-
   // ✅ Animation Variants
   const container = {
     hidden: {},
@@ -42,16 +50,23 @@ function AllSkills() {
     { img: html, name: "HTML" },
     { img: css, name: "CSS" },
     { img: js, name: "JavaScript" },
+    { img: Bootsrap, name: "Bootstrap" },
+    { img: Tailwind, name: "Tailwind" },
     { img: ReactImg, name: "React" },
     { img: redux, name: "Redux" },
-    { img: mui, name: "MUI" },
     { img: VScode, name: "VS Code" },
     { img: IntelliJIDEA, name: "IntelliJ" },
+    { img: postman, name: "Postman" },
+    { img: thunderclient, name: "Thunder" },
+    { img: adobephotshop, name: "Photoshop " },
     { img: framer, name: "Framer M" },
+    { img: cloudinary, name: "Cloudinary" },
     { img: git, name: "Git" },
     { img: github, name: "GitHub" },
-    { img: python, name: "Python" },
     { img: java, name: "Java" },
+    { img: mongodb, name: "MongoDb" },
+    { img: expressjs, name: "ExpressJs" },
+    { img: nodejs, name: "NodeJs" },
   ];
 
   return (
@@ -64,11 +79,7 @@ function AllSkills() {
         viewport={{ once: true }}
       >
         {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            variants={item}
-            className="card1-tool"
-          >
+          <motion.div key={index} variants={item} className="card1-tool">
             <div className="card1-tool-img">
               <img src={skill.img} alt={skill.name} />
             </div>
