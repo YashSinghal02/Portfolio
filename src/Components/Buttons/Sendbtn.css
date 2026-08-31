@@ -5,11 +5,11 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
-            border: 1px solid #c084fc;
+            border: 1px solid #b46afe;
             border-radius: 12px;
             color: #fff;
-            font-weight: 900;
-            background: #c084fc;
+            font-weight:bold;
+            background: #9756d8;
             text-transform: uppercase;
             padding: 14px 22px;
             z-index: 10;
@@ -21,7 +21,7 @@
         }
 
         .send-button:hover {
-            color: #c084fc;
+            color: #9756d8;
             background: #fff;
         }
 

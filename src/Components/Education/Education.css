@@ -22,7 +22,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: #9c71c52e;
+  backdrop-filter: blur(12px);
   border-radius: 15px;
   border: 2px solid #c084fc;
   padding: 25px 20px;

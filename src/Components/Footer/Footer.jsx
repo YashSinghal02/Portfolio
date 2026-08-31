@@ -42,7 +42,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2025 Yash Singhal. All rights reserved.</p>
+        {/* <p>&copy; 2025 Yash Singhal. All rights reserved.</p> */}
       </div>
       <motion.button 
       className="downtotop"
