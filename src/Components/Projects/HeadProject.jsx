@@ -1,53 +1,102 @@
-import './HeadProject.css';
+import "./HeadProject.css";
 import Lottie from "lottie-react";
 import Projectsanimated from "../../Animations/Projectsanimated.json";
-import GitBtn from '../Buttons/GitBtn';
-import { motion } from 'motion/react';
-function HeadProject() {
- const fadeLeft = {
-  hidden: { opacity: 0, x: -80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
-};
+import GitBtn from "../Buttons/GitBtn";
+import { motion } from "motion/react";
 
-const fadeRight = {
-  hidden: { opacity: 0, x: 80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.2 }
-  }
-};
+function HeadProject() {
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        delay: 0.15,
+      },
+    },
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
   return (
-    <div className="HeadProject-container">
+    <section className="HeadProject-container">
+      <motion.div
+        className="about-heading"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <span className="project-label">
+          <span className="project-label-dot"></span>
+          PROJECTS
+        </span>
+      </motion.div>
       <div className="HeadProject-flex">
-        
-        <motion.div 
-         variants={fadeLeft}
+        {/* Content */}
+        <motion.div
+          variants={fadeLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} 
-          className="HeadProject-txt">
-          <h2>Explore My Projects</h2>
+          viewport={{ once: true, amount: 0.2 }}
+          className="HeadProject-txt"
+        >
+          {/* <span className="project-label">
+            <span className="project-label-dot"></span>
+            PROJECTS
+          </span> */}
+
+          <h2>
+            Explore My <span>Projects</span>
+          </h2>
+
           <p>
-            You can explore all my projects on my GitHub profile. There, you’ll find my activities, contributions, and code across completed and ongoing projects. Feel free to ⭐ star the repos you like, leave comments, or start a discussion. I’m always open to new ideas and collaborations. You can also connect with me through the social media links below.
+            Explore my projects on GitHub, where you'll find my work,
+            contributions, and code across completed and ongoing projects. Feel
+            free to explore the repositories, star the ones you like, and
+            connect with me for ideas or collaborations.
           </p>
-          <GitBtn/>
+
+          <div className="project-btn">
+            <GitBtn />
+          </div>
         </motion.div>
 
-        <motion.div 
-         variants={fadeRight}
+        {/* Animation */}
+        <motion.div
+          variants={fadeRight}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-           className="HeadProject-img">
+          viewport={{ once: true, amount: 0.2 }}
+          className="HeadProject-img"
+        >
+          <div className="project-animation-glow"></div>
+
           <Lottie animationData={Projectsanimated} loop={true} />
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 

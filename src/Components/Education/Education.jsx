@@ -49,7 +49,10 @@ function Education() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <h2>Education</h2>
+        <span className="contact-label">
+          <span className="project-label-dot"></span>
+          EDUCATION
+        </span>
       </motion.div>
       {/* <h2 className="edu-heading">Education</h2> */}
 

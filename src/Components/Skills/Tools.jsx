@@ -3,6 +3,7 @@ import IntelliJIDEA from "../../assets/IntelliJIDEA.png";
 import thunderclient from "../../assets/thunderclient.png";
 import postman from "../../assets/postman.png";
 import adobephotshop from "../../assets/adobephotshop.png";
+import inngest from "../../assets/inngest.png";
 import "./Skills.css";
 import { motion } from "motion/react";
 
@@ -34,6 +35,7 @@ function Tools() {
     { img: postman, name: "Postman" },
     { img: thunderclient, name: "Thunder" },
     { img: adobephotshop, name: "Photoshop " },
+   { img: inngest, name: "Inngest" },
   ];
 
   return (

@@ -1,150 +1,449 @@
-/* ====== Skill Buttons ====== */
+/* =========================================
+   SKILLS SECTION
+========================================= */
+
+.skills-section {
+  width: 100%;
+  padding: 30px 0;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SKILL TABS
+========================================= */
+
 .grp-btns {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 35px;
 }
 
 .Skill-btns {
-  color: #c084fc;
-  font-family: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 20px;
-  height: 40px;
-  padding: 0 18px;
-  margin: 8px;
   position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 42px;
+  padding: 0 18px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  background: rgba(151, 86, 216, 0.06);
+
+  border: 1.5px solid rgba(151, 86, 216, 0.28);
+  border-radius: 999px;
+
   cursor: pointer;
   overflow: hidden;
-  border: 2px solid #c084fc;
-  transition: color 0.5s ease;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
   z-index: 1;
-  font-size: 15px;
-  border-radius: 25px;
-  font-weight: 500;
-  background-color: transparent;
 }
 
-.Skill-btns:before {
+
+/* Purple hover layer */
+
+.Skill-btns::before {
   content: "";
+
   position: absolute;
   z-index: -1;
-  background: #c084fc;
-  height: 200%;
-  width: 200%;
-  border-radius: 50%;
+
+  width: 180%;
+  height: 180%;
+
   top: 100%;
   left: 100%;
-  transition: all 0.6s ease;
+
+  background: #9756d8;
+  border-radius: 50%;
+
+  transition: all 0.55s ease;
 }
 
 .Skill-btns:hover {
-  color: #fff;
+  color: #ffffff;
+
+  border-color: rgba(151, 86, 216, 0.65);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(151, 86, 216, 0.12);
 }
 
-.Skill-btns:hover:before {
-  top: -50%;
-  left: -50%;
+.Skill-btns:hover::before {
+  top: -40%;
+  left: -40%;
 }
 
-.Skill-btns:active:before {
-  background: #a855f7;
-  transition: 0s;
-}
 
-/* Active tab styling */
+/* =========================================
+   ACTIVE TAB
+========================================= */
+
 .Skill-btns.active {
-  background: #c084fc;
-  color: #fff;
-  transform: scale(1.05);
+  color: #ffffff;
+
+  background: rgba(151, 86, 216, 0.22);
+
+  border-color: rgba(151, 86, 216, 0.75);
+
+  box-shadow:
+    0 0 0 1px rgba(151, 86, 216, 0.08),
+    0 8px 28px rgba(151, 86, 216, 0.16);
+
+  transform: translateY(-1px);
 }
 
-.Skill-btns.active:before {
-  background: #a855f7;
-  top: -50%;
-  left: -50%;
+.Skill-btns.active::before {
+  background: #9756d8;
+
+  top: -40%;
+  left: -40%;
 }
 
-/* Tab icon styling */
+
+/* =========================================
+   TAB ICON
+========================================= */
+
 .tab-icon {
-  margin-right: 8px;
-  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 7px;
+
+  font-size: 15px;
+
+  color: #b98be8;
+
+  transition: color 0.3s ease;
 }
 
-/* Tab content animation */
+.Skill-btns:hover .tab-icon,
+.Skill-btns.active .tab-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TAB CONTENT
+========================================= */
+
 .tab-content {
-  animation: fadeIn 0.3s ease-in-out;
+  width: 100%;
+
+  animation: fadeIn 0.35s ease-in-out;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Skills section container */
-.skills-section {
-  padding: 20px 0;
-}
 
-/* ====== Tools Section ====== */
+/* =========================================
+   TOOLS GRID
+========================================= */
+
 .tools {
-  margin-top: 50px;
+  margin-top: 30px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+
+  gap: 16px;
   flex-wrap: wrap;
+
   padding: 10px;
 }
 
-/* ====== Tool Card ====== */
+
+/* =========================================
+   TOOL CARD
+========================================= */
+
 .card1-tool {
-  border-radius: 12px;
-  width: 110px;
-  height: 110px;
-  padding: 12px;
-  background: #fff;
+  position: relative;
+
+  width: 115px;
+  height: 115px;
+
+  padding: 14px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease-in-out;
+
+  gap: 8px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(151, 86, 216, 0.18) 0%,
+    rgba(58, 34, 75, 0.3) 50%,
+    rgba(24, 18, 29, 0.819) 100%
+  );
+
+  /* border: 1px solid rgba(151, 86, 216, 0.20); */
+
+  border-radius: 18px;
+
+border: 1.5px solid rgba(151, 86, 216, 0.28);
+
+box-shadow:
+  0 12px 30px rgba(0, 0, 0, 0.4),
+  0 0 20px rgba(151, 86, 216, 0.06),
+  inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
   cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
+
+
+/* Subtle card glow */
+
+.card1-tool::before {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  top: -35px;
+  right: -30px;
+
+  background: rgba(151, 86, 216, 0.13);
+
+  filter: blur(30px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* Card hover */
 
 .card1-tool:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 10px 5px 2px #c084fc1d;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(151, 86, 216, 0.25) 0%,
+      rgba(70, 40, 90, 0.18) 50%,
+      rgba(23, 17, 29, 0.829) 100%
+    );
+
+  border-color: rgba(151, 86, 216, 0.55);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.5),
+    0 0 28px rgba(151, 86, 216, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Image */
+
+/* =========================================
+   TOOL ICON CONTAINER
+   Keeps dark/black logos visible
+========================================= */
+
 .card1-tool-img {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
+
+  padding: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(255, 255, 255);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 10px;
+
+  position: relative;
+  z-index: 1;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card1-tool-img img {
   width: 100%;
   height: 100%;
+
   object-fit: contain;
+
+  transition:
+    transform 0.3s ease;
 }
 
-/* Text */
+.card1-tool:hover .card1-tool-img {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.card1-tool:hover .card1-tool-img img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   TOOL TEXT
+========================================= */
+
+.card1-tool-txt {
+  position: relative;
+  z-index: 1;
+}
+
 .card1-tool-txt p {
-  font-weight: 600;
-  font-size: 14px;
-  color: #333;
   margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: 'Inter', sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-align: center;
+
+  transition: color 0.3s ease;
+}
+
+.card1-tool:hover .card1-tool-txt p {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .grp-btns {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .Skill-btns {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .tools {
+    gap: 13px;
+  }
+
+  .card1-tool {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 16px;
+  }
+
+  .card1-tool-img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .skills-section {
+    padding: 20px 0;
+  }
+
+  .grp-btns {
+    gap: 7px;
+    padding: 0 10px;
+  }
+
+  .Skill-btns {
+    height: 38px;
+    padding: 0 13px;
+
+    font-size: 12px;
+  }
+
+  .tab-icon {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .tools {
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .card1-tool {
+    width: 92px;
+    height: 98px;
+
+    padding: 10px;
+
+    border-radius: 15px;
+  }
+
+  .card1-tool-img {
+    width: 40px;
+    height: 40px;
+
+    padding: 6px;
+
+    border-radius: 9px;
+  }
+
+  .card1-tool-txt p {
+    font-size: 11px;
+  }
 }
