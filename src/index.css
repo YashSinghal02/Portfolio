@@ -1,43 +1,94 @@
 @import "tailwindcss";
+
 /* Paragraphs */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-/* Heading */
+
+/* Headings */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Reset */
+
+/* ================================
+   RESET
+================================ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body
-{
-      background-color: #000000;
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Poppins', sans-serif;
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+
+  background-color: #000000;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+
+  font-family: 'Inter', sans-serif;
 }
+
+
+/* ================================
+   HEADINGS
+================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+
+/* ================================
+   PARAGRAPHS
+================================ */
 
 p {
   font-family: 'Inter', sans-serif;
 }
-/* cutom Scrollbar */
-::-webkit-scrollbar
-{
-  width: 12px;
-  /* height: 100px; */
-  height: 5px!important;
-}
-::-webkit-scrollbar-track
-{
-  background-color: #d1e5ff;
-  
-}
-::-webkit-scrollbar-thumb{
-  background: #c084fc;
 
-  border-radius: 10px;
-  height: 5px!important;
+
+/* ================================
+   CUSTOM SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
 }
-/* cutom Scrollbar */
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9756d8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a96be4;
+}
+
+
+/* ================================
+   HORIZONTAL SCROLLBAR
+   Hide it completely
+================================ */
+
+::-webkit-scrollbar:horizontal {
+  height: 0;
+}

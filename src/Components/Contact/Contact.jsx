@@ -1,7 +1,9 @@
 import Sendbtn from "../Buttons/Sendbtn";
 import "./Contact.css";
+
 import { motion } from "motion/react";
 import { useForm } from "react-hook-form";
+
 function Contact() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -12,149 +14,283 @@ function Contact() {
     },
   };
 
-   const fadeLeft = {
-  hidden: { opacity: 0, x: -80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
-};
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
-const fadeRight = {
-  hidden: { opacity: 0, x: 80 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.2 }
-  }
-};
+  const fadeRight = {
+    hidden: { opacity: 0, x: 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+    },
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm();
+  } = useForm({
+    mode: "onBlur",
+  });
 
   async function onSubmit(data) {
     console.log("Submitted Data:", data);
+
     await new Promise((resolve) => setTimeout(resolve, 1500));
+
     reset();
   }
+
   return (
-    <div>
-      <motion.div className="about-heading"
-      variants={fadeUp}
+    <div className="contact-section">
+      {/* Heading */}
+      <motion.div
+        className="about-heading"
+        variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
+        <span className="contact-label">
+          <span className="project-label-dot"></span>
+          CONTACT
+        </span>
         <h2>Get in Touch</h2>
+        <p>
+          Have a project in mind? Let's create something meaningful together.
+        </p>
       </motion.div>
+
       <div className="contact-flex">
+        {/* LEFT SIDE */}
         <motion.div
           variants={fadeLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }} 
+          viewport={{ once: true }}
           className="form-txt"
         >
-          <h2>Have Any Questions?</h2>
+          <span className="contact-small-title">LET'S TALK</span>
+
+          <h2>
+            Have an idea?
+            <br />
+            <span>Let's make it happen.</span>
+          </h2>
+
           <p>
-            Do you have any questions or need more information? I'm here to
-            assist you! Whether it's about a specific project, my skills, or how
-            we can collaborate, don't hesitate to reach out. Your inquiries are
-            important to me, and I'll do my best to respond promptly. Use the
-            form below to send me a message, and let's start a conversation.
-            Looking forward to hearing from you soon!
+            Whether you have a project idea, a question, or simply want to
+            connect, feel free to reach out. I'm always open to discussing new
+            ideas, creative projects, and opportunities to collaborate.
           </p>
+
           <div className="contact-icons">
-            <h4>
-              <i className="fa-solid fa-mobile-screen-button"></i>{" "}
-              +91-6397341005
-            </h4>
-            <h4>
-              <i className="fa-solid fa-envelope"></i> yash92singhal@gmail.com
-            </h4>
-            <h4>
-              <i className="fa-solid fa-location-dot"></i> Uttrakhand,Dehradun
-            </h4>
+            <div className="contact-info-card">
+              <div className="contact-icon">
+                <i className="fa-solid fa-mobile-screen-button"></i>
+              </div>
+
+              <div>
+                <span>Phone</span>
+                <h4>+91-6397341005</h4>
+              </div>
+            </div>
+
+            <div className="contact-info-card">
+              <div className="contact-icon">
+                <i className="fa-solid fa-envelope"></i>
+              </div>
+
+              <div>
+                <span>Email</span>
+                <h4>yash92singhal@gmail.com</h4>
+              </div>
+            </div>
+
+            <div className="contact-info-card">
+              <div className="contact-icon">
+                <i className="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div>
+                <span>Location</span>
+                <h4>Dehradun, Uttarakhand</h4>
+              </div>
+            </div>
+          </div>
+
+          <div className="availability">
+            <span className="availability-dot"></span>
+            Available for new projects
           </div>
         </motion.div>
+
+        {/* RIGHT SIDE */}
         <motion.div
-         variants={fadeRight}
+          variants={fadeRight}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="form-app"
         >
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-top">
+            <div>
+              <span>01</span>
+              <h3>Send a Message</h3>
+            </div>
+
+            <i className="fa-regular fa-paper-plane"></i>
+          </div>
+
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             {/* Name */}
-            <label>Name</label>
-            <input
-              type="text"
-              placeholder="Name"
-              {...register("name", {
-                required: "Name is required",
-                pattern: {
-                  value: /^[a-zA-Z][a-zA-Z0-9_]{2,15}$/,
-                  message: "Enter a valid Name",
-                },
-              })}
-            />
-            {errors.name && <p className="error-text">{errors.name.message}</p>}
+            <div className="input-group">
+              <label htmlFor="name">
+                Name
+                <span>*</span>
+              </label>
 
-            {/* Phone Number */}
-            <label>Phone Number</label>
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              {...register("phone", {
-                required: "Phone Number is required",
-                pattern: {
-                  value: /^(\+91|0)?[6-9]\d{9}$/,
-                  message: "Enter a valid phone number",
-                },
-              })}
-            />
-            {errors.phone && (
-              <p className="error-text">{errors.phone.message}</p>
-            )}
+              <input
+                id="name"
+                type="text"
+                placeholder="Your name"
+                autoComplete="name"
+                className={errors.name ? "input-invalid" : ""}
+                {...register("name", {
+                  required: "Please enter your name",
+                  minLength: {
+                    value: 3,
+                    message: "Name must be at least 3 characters",
+                  },
+                  maxLength: {
+                    value: 40,
+                    message: "Name cannot exceed 40 characters",
+                  },
+                  pattern: {
+                    value: /^[a-zA-Z][a-zA-Z\s.'-]{2,39}$/,
+                    message: "Please enter a valid name",
+                  },
+                })}
+              />
 
-            {/* Email */}
-            <label>Email</label>
-            <input
-              type="email"
-              placeholder="Email"
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^\S+@\S+\.\S+$/,
-                  message: "Enter a valid email address",
-                },
-              })}
-            />
-            {errors.email && (
-              <p className="error-text">{errors.email.message}</p>
-            )}
+              {errors.name && (
+                <p className="error-text">
+                  <i className="fa-solid fa-circle-exclamation"></i>
+                  {errors.name.message}
+                </p>
+              )}
+            </div>
+
+            {/* Phone + Email */}
+            <div className="input-row">
+              <div className="input-group">
+                <label htmlFor="phone">
+                  Phone
+                  <span>*</span>
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="+91 9876543210"
+                  autoComplete="tel"
+                  className={errors.phone ? "input-invalid" : ""}
+                  {...register("phone", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^(\+91|0)?[6-9]\d{9}$/,
+                      message: "Enter a valid Indian phone number",
+                    },
+                  })}
+                />
+
+                {errors.phone && (
+                  <p className="error-text">
+                    <i className="fa-solid fa-circle-exclamation"></i>
+                    {errors.phone.message}
+                  </p>
+                )}
+              </div>
+
+              <div className="input-group">
+                <label htmlFor="email">
+                  Email
+                  <span>*</span>
+                </label>
+
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  autoComplete="email"
+                  className={errors.email ? "input-invalid" : ""}
+                  {...register("email", {
+                    required: "Email address is required",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Enter a valid email address",
+                    },
+                  })}
+                />
+
+                {errors.email && (
+                  <p className="error-text">
+                    <i className="fa-solid fa-circle-exclamation"></i>
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
+            </div>
 
             {/* Message */}
-            <label>Message</label>
-            <textarea
-              rows={4}
-              cols={3}
-              placeholder="Your message"
-              {...register("message", {
-                required: "Message is required",
-                minLength: { value: 5, message: "Minimum 5 characters" },
-              })}
-            />
-            {errors.message && (
-              <p className="error-text">{errors.message.message}</p>
-            )}
+            <div className="input-group">
+              <label htmlFor="message">
+                Message
+                <span>*</span>
+              </label>
 
-            {/* Submit Button */}
-            <Sendbtn disabled={isSubmitting} />
+              <textarea
+                id="message"
+                rows={5}
+                placeholder="Tell me about your project..."
+                className={errors.message ? "input-invalid" : ""}
+                {...register("message", {
+                  required: "Please enter your message",
+                  minLength: {
+                    value: 10,
+                    message: "Message must be at least 10 characters",
+                  },
+                  maxLength: {
+                    value: 1000,
+                    message: "Message cannot exceed 1000 characters",
+                  },
+                })}
+              />
+
+              {errors.message && (
+                <p className="error-text">
+                  <i className="fa-solid fa-circle-exclamation"></i>
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
+
+            <div className="form-bottom">
+              <p>
+                <i className="fa-solid fa-lock"></i>
+                Your information stays private.
+              </p>
+
+              <Sendbtn disabled={isSubmitting} />
+            </div>
           </form>
         </motion.div>
       </div>

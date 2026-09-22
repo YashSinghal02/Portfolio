@@ -1,28 +1,27 @@
-import './Home.css'
-import { motion } from 'motion/react';
-import HomeImg from '../../assets/homeimg.png'
-import SocialMedIcons from '../../SocialMediaIcons/SocialMedIcons'
-import AutoText from './AutoText';
+import "./Home.css";
+import { motion } from "motion/react";
+import HomeImg from "../../assets/homeimg.png";
+import SocialMedIcons from "../../SocialMediaIcons/SocialMedIcons";
+import AutoText from "./AutoText";
 
 function Home() {
-
   const container = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.25
-      }
-    }
-  }
+        staggerChildren: 0.25,
+      },
+    },
+  };
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" }
-    }
-  }
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   return (
     <motion.div
@@ -33,7 +32,6 @@ function Home() {
       animate="visible"
     >
       <div className="contaner">
-
         {/* Background */}
         <div className="bg-circle-center">
           <div className="bg-circle-2"></div>
@@ -42,35 +40,27 @@ function Home() {
         </div>
 
         <div className="Intro-cnter">
-
           {/* Text Section */}
           <div className="auto-text">
+            <motion.h3 variants={fadeUp}>Hi, Myself</motion.h3>
 
-            <motion.h3 variants={fadeUp}>
-              Hi, Myself
-            </motion.h3>
-
-            <motion.h1 
-              variants={fadeUp}
-              whileHover={{ scale: 1.05 }}
-            >
+            <motion.h1 variants={fadeUp} whileHover={{ scale: 1.05 }}>
               Yash Singhal
             </motion.h1>
 
             <motion.div variants={fadeUp}>
               <AutoText />
             </motion.div>
-
           </div>
 
           {/* Image Section */}
           <motion.div
             className="home-img"
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ 
-              opacity: 1, 
+            animate={{
+              opacity: 1,
               scale: 1,
-              y: [0, 0, 0] 
+              y: [0, 0, 0],
             }}
             transition={{
               opacity: { duration: 1 },
@@ -78,21 +68,18 @@ function Home() {
               y: {
                 duration: 5,
                 repeat: Infinity,
-                ease: "easeInOut"
-              }
+                ease: "easeInOut",
+              },
             }}
           >
             <img src={HomeImg} alt="Yash Singhal" />
           </motion.div>
 
           {/* Tagline */}
-          <motion.div
-            className="tag-line"
-            variants={fadeUp}
-          >
+          <motion.div className="tag-line" variants={fadeUp}>
             <p>
-              Frontend web developer passionate about turning ideas into clean,
-              dynamic, and engaging web experiences.
+              Full Stack Developer passionate about turning ideas into clean,
+              modern, and engaging web experiences.
             </p>
           </motion.div>
 
@@ -100,11 +87,10 @@ function Home() {
           <motion.div variants={fadeUp}>
             <SocialMedIcons />
           </motion.div>
-
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
 
-export default Home
+export default Home;

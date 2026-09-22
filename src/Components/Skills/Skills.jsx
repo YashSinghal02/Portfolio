@@ -53,7 +53,10 @@ function Skills() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <h2>My Skills</h2>
+        <span className="contact-label">
+          <span className="project-label-dot"></span>
+          SKILLS
+        </span>
       </motion.div>
 
       {/* Simple Tab Buttons */}

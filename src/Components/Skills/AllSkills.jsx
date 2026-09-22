@@ -20,6 +20,12 @@ import mongodb from "../../assets/mongodb.png";
 import thunderclient from "../../assets/thunderclient.png";
 import postman from "../../assets/postman.png";
 import adobephotshop from "../../assets/adobephotshop.png";
+import socketio from "../../assets/socketio.png";
+import zustnad from "../../assets/zustnad.jpg";
+import stream from "../../assets/stream.png";
+import clerk from "../../assets/clerk.png";
+import tanstack from "../../assets/tanstack.png";
+import inngest from "../../assets/inngest.png";
 
 import "./Skills.css";
 import { motion } from "motion/react";
@@ -46,28 +52,38 @@ function AllSkills() {
   };
 
   // ✅ Skills Data Array
-  const skills = [
-    { img: html, name: "HTML" },
-    { img: css, name: "CSS" },
-    { img: js, name: "JavaScript" },
-    { img: Bootsrap, name: "Bootstrap" },
-    { img: Tailwind, name: "Tailwind" },
-    { img: ReactImg, name: "React" },
-    { img: redux, name: "Redux" },
-    { img: VScode, name: "VS Code" },
-    { img: IntelliJIDEA, name: "IntelliJ" },
-    { img: postman, name: "Postman" },
-    { img: thunderclient, name: "Thunder" },
-    { img: adobephotshop, name: "Photoshop " },
-    { img: framer, name: "Framer M" },
-    { img: cloudinary, name: "Cloudinary" },
-    { img: git, name: "Git" },
-    { img: github, name: "GitHub" },
-    { img: java, name: "Java" },
-    { img: mongodb, name: "MongoDb" },
-    { img: expressjs, name: "ExpressJs" },
-    { img: nodejs, name: "NodeJs" },
-  ];
+ const skills = [
+  { img: html, name: "HTML" },
+  { img: css, name: "CSS" },
+  { img: js, name: "JavaScript" },
+  { img: ReactImg, name: "React" },
+  { img: Tailwind, name: "Tailwind" },
+  { img: redux, name: "Redux" },
+  { img: nodejs, name: "Node.js" },
+  { img: expressjs, name: "Express.js" },
+  { img: mongodb, name: "MongoDB" },
+  { img: java, name: "Java" },
+
+  { img: zustnad, name: "zustnad" },
+  { img: tanstack, name: "TanStack Query" },
+  { img: socketio, name: "Socket.IO" },
+  { img: clerk, name: "Clerk" },
+  { img: stream, name: "Stream" },
+  { img: inngest, name: "Inngest" },
+
+  { img: Bootsrap, name: "Bootstrap" },
+  { img: framer, name: "Framer Motion" },
+  { img: cloudinary, name: "Cloudinary" },
+
+  { img: postman, name: "Postman" },
+  { img: thunderclient, name: "Thunder Client" },
+  { img: VScode, name: "VS Code" },
+  { img: IntelliJIDEA, name: "IntelliJ IDEA" },
+  { img: adobephotshop, name: "Photoshop" },
+
+  { img: git, name: "Git" },
+  { img: github, name: "GitHub" },
+];
 
   return (
     <div className="skill-set">

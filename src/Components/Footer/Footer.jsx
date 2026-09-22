@@ -1,58 +1,212 @@
-import FooterMedia from '../../SocialMediaIcons/FooterMedia'
-import './Footer.css'
-import { motion, useScroll, useMotionValueEvent, useTransform } from "framer-motion";
+import "./Footer.css";
+import { motion, AnimatePresence } from "motion/react";
+import { useEffect, useState } from "react";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaInstagram,
+  FaArrowUp,
+} from "react-icons/fa6";
+
 function Footer() {
-   const { scrollY } = useScroll();
+  const [showTopButton, setShowTopButton] = useState(false);
 
-  useMotionValueEvent(scrollY, "change", (val) => {
-    console.log(val);
-   
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopButton(window.scrollY > 200);
+    };
 
-  });
-   const opacity = useTransform(scrollY, [0, 100], ["0", "1"]);
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 25,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div>
-     <footer className="footer-container">
-      <div className="footer-content">
-        <div className="footer-left">
-           <div className='logo1'> 
-        <i className="fa-solid fa-less-than"></i>
-        <span >Yash <span className='lastName'>Singhal /</span></span>
-        <i className="fa-solid fa-greater-than lastName"></i></div>
-          <p>Full Stack Developer</p>
-          <p>Turning Vision into Digital Reality.</p>
-        </div>
+    <footer className="footer">
 
-        <div className="footer-center">
-          <h4>Contact</h4>
-          <p><i className="fa-solid fa-mobile-screen-button"></i> +91-6397341005</p>
-          <p><i className="fa-solid fa-envelope"></i> yash92singhal@gmail.com</p>
-          <p><i className="fa-solid fa-location-dot"></i> Dehradun, Uttarakhand</p>
-        </div>
+      <div className="footer-glow"></div>
 
-        <div className="footer-right">
-          <h4>Follow Me</h4>
-          <div className="social-icons">
-            {/* <a href="https://github.com/YashSinghal02" target="_blank"><i className="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/yashsinghal-fullstackdeveloper/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a> */}
-            <FooterMedia/>
+      <motion.div
+        className="footer-wrapper"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+
+        {/* ================= FOOTER TOP ================= */}
+
+        <div className="footer-top">
+
+          {/* Brand */}
+          <div className="footer-brand">
+
+            {/* EXACT NAVBAR LOGO */}
+            <div className="logo">
+              <i className="fa-solid fa-less-than"></i>
+
+              <span>
+                Yash{" "}
+                <span className="lastName">
+                  Singhal /
+                </span>
+              </span>
+
+              <i className="fa-solid fa-greater-than lastName"></i>
+            </div>
+
+            <p>
+              Full Stack Developer focused on building modern, responsive, and engaging web experiences.
+
+            </p>
+
+            <div className="footer-available">
+              <span className="status-dot"></span>
+              Available for opportunities
+            </div>
+
           </div>
-        </div>
-      </div>
 
-      <div className="footer-bottom">
-        {/* <p>&copy; 2025 Yash Singhal. All rights reserved.</p> */}
-      </div>
-      <motion.button 
-      className="downtotop"
-        style={{
-        opacity}}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <i className="fa-solid fa-up-long"></i></motion.button>
+
+          {/* Connect */}
+          <div className="footer-connect">
+
+            <h3>Let's Connect</h3>
+
+            <p>
+              Have an idea or opportunity?
+              <br />
+              Let's build something together.
+            </p>
+
+            {/* Social Icons */}
+            <div className="footer-socials">
+
+              <a
+                href="https://github.com/YashSinghal02"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/yashsinghal01/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://www.instagram.com/yashsinghal21/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* ================= DIVIDER ================= */}
+
+        <div className="footer-divider"></div>
+
+
+        {/* ================= BOTTOM ================= */}
+
+        <div className="footer-bottom">
+
+          <p>
+            © {new Date().getFullYear()} Yash Singhal. All rights reserved.
+          </p>
+
+          <p className="footer-built">
+            Designed & Built with <span>React</span>
+          </p>
+
+        </div>
+
+      </motion.div>
+
+
+      {/* ================= BACK TO TOP ================= */}
+
+      <AnimatePresence>
+        {showTopButton && (
+          <motion.button
+            className="footer-top-btn"
+            onClick={scrollTop}
+            aria-label="Back to top"
+
+            initial={{
+              opacity: 0,
+              scale: 0.7,
+              y: 20,
+            }}
+
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: 0,
+            }}
+
+            exit={{
+              opacity: 0,
+              scale: 0.7,
+              y: 20,
+            }}
+
+            transition={{
+              duration: 0.3,
+              ease: "easeOut",
+            }}
+
+            whileTap={{
+              scale: 0.92,
+            }}
+          >
+            <FaArrowUp />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
     </footer>
-    </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

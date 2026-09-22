@@ -9,7 +9,7 @@ import tour from "../../assets/tour.png";
 import education from "../../assets/education.png";
 import samsung from "../../assets/samsung.png";
 import TechMart from "../../assets/TechMart.png";
-import wheather from "../../assets/wheather.png";
+import ChitChat from "../../assets/ChitChat.png";
 
 function Projects() {
   /* ================= Animation Variants ================= */
@@ -55,7 +55,7 @@ const item = {
 };
   /* ================= Projects Data ================= */
 
- const projects = [
+const projects = [
   {
     title: "HireBase",
     image: HireBase,
@@ -64,6 +64,15 @@ const item = {
     tech: ["ReactJS", "Node.js", "Express.js", "MongoDB"],
     code: "https://github.com/YashSinghal02/HireBase-Frontend",
     live: "https://hirebase-app.vercel.app/",
+  },
+  {
+    title: "ChitChat",
+    image: ChitChat,
+    description:
+      "A full-stack real-time chat application with secure authentication, one-to-one messaging, online status, and real-time communication using Socket.IO.",
+    tech: ["ReactJS", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
+    code: "https://github.com/YashSinghal02/ChitChatFrontend",
+    live: "https://chit-chat-frontend-three.vercel.app/",
   },
   {
     title: "TechMart",
@@ -93,15 +102,6 @@ const item = {
     live: "https://yashsinghal02.github.io/Tour-Travel-Ready-ToGo-/",
   },
   {
-    title: "Learning Platform",
-    image: education,
-    description:
-      "An educational platform delivering structured learning content with interactive UI. Focused on improving accessibility and engagement for users looking to enhance their skills online.",
-    tech: ["HTML", "CSS","Bootstrap", "JavaScript"],
-    code: "https://github.com/YashSinghal02/Learning-Platform",
-    live: "https://yashsinghal02.github.io/Learning-Platform/",
-  },
-  {
     title: "Samsung Clone",
     image: samsung,
     description:
@@ -117,7 +117,7 @@ const item = {
   return (
     <div className="projects-section">
       {/* Heading */}
-      <motion.div
+      {/* <motion.div
         className="about-heading"
         variants={fadeUp}
         initial="hidden"
@@ -125,7 +125,7 @@ const item = {
         viewport={{ once: true }}
       >
         <h2>My Projects</h2>
-      </motion.div>
+      </motion.div> */}
 
       {/* Intro Section */}
       <HeadProject />

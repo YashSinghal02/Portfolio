@@ -1,132 +1,399 @@
-/* Container for all projects */
-.project-containers {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-    
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.projects-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  overflow: hidden;
 }
 
-/* Individual project card */
-.project-one {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 390px;
-    background-color: #1e1e1e; 
-    border-radius: 10px;
-    border: 1.5px solid #c084fce4;
-    box-shadow: 0 4px 15px rgba(192, 132, 252, 0.185); 
-    overflow: hidden;
-    transition: all 0.3s ease;
-    color: #ffffff;
-      transform-style: preserve-3d;
 
+/* =========================================
+   PROJECT CARDS CONTAINER
+========================================= */
+
+.project-containers {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+
+  padding: 30px 5%;
+}
+
+
+/* =========================================
+   INDIVIDUAL PROJECT CARD
+========================================= */
+
+.project-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 390px;
+
+  background: linear-gradient(
+    145deg,
+    #100b15 0%,
+    #0c080f 60%,
+    #080609 100%
+  );
+
+  border: 1.5px solid #9756d85c;
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(151, 86, 216, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .project-one:hover {
-    box-shadow: 0 8px 15px rgba(192, 132, 252, 0.112);
+  transform: translateY(-6px);
+
+  border-color: #9756d899;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(151, 86, 216, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
 }
 
-/* Project image container */
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
 .project-img {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+  width: 100%;
+  height: 200px;
+
+  overflow: hidden;
+
+  background: #080609;
+
+  border-bottom: 1px solid rgba(151, 86, 216, 0.12);
 }
 
 .project-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 .project-one:hover .project-img img {
-    transform: scale(1.06);
+  transform: scale(1.06);
 }
 
-/* Text section */
+
+/* =========================================
+   PROJECT TEXT
+========================================= */
+
 .project-txt {
-    padding: 15px;
-    width: 100%;
+  width: 100%;
+  padding: 22px 20px 20px;
 }
 
 .project-txt h2 {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #f0f0f0;
+  margin: 0 0 12px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+
+  line-height: 1.25;
 }
 
 .project-txt p {
-    text-align: justify;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #d0d0d0;
+  margin: 0;
+
+  text-align: left;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
 }
 
-/* Badges */
+
+/* =========================================
+   TECHNOLOGY BADGES
+========================================= */
+
 .badge-flexx {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 20px 0;
+
+  flex-wrap: wrap;
 }
 
 .badge1 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    background: rgba(192, 132, 252, 0.12);
-    color: #c084fc;
+  padding: 6px 13px;
 
-    border: 1px solid rgba(192, 132, 252, 0.45);
-    border-radius: 999px;
+  background: rgba(151, 86, 216, 0.12);
 
-    padding: 6px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    /* letter-spacing: 0.4px; */
+  border: 1px solid rgba(151, 86, 216, 0.35);
+
+  border-radius: 999px;
+
+  color: #b98be8;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
 }
-
 
 .badge1:hover {
-    /* background-color: #a855f7;
-    color: #fff; */
-}
-.viewallbtn{
-    margin:20px auto;
-    text-align: center;
+  background: rgba(151, 86, 216, 0.19);
+
+  border-color: rgba(151, 86, 216, 0.55);
+
+  color: #d0a9f0;
 }
 
-/* Buttons */
+
+/* =========================================
+   PROJECT BUTTONS
+========================================= */
+
 .btns-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 12px;
 }
 
-@media only screen and (min-width:1000px) {
-    .project-one {
-        width: 305px;
-    }
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
+
+.viewallbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 25px 0 50px;
+
+  text-align: center;
 }
-@media only screen and (min-width:1079px) {
-    .project-one {
-        width: 330px;
-    }
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media only screen and (max-width: 999px) {
+
+  .project-containers {
+    padding: 25px 4%;
+    gap: 24px;
+  }
+
+  .project-one {
+    width: 340px;
+  }
+
+  .project-img {
+    height: 190px;
+  }
 }
-@media only screen and (min-width:1200px) {
-    .project-one {
-        width: 390px;
-    }
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media only screen and (min-width: 1000px) {
+
+  .project-one {
+    width: 305px;
+  }
+
+  .project-img {
+    height: 185px;
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media only screen and (min-width: 1080px) {
+
+  .project-one {
+    width: 330px;
+  }
+
+  .project-img {
+    height: 195px;
+  }
+}
+
+
+/* =========================================
+   EXTRA LARGE DESKTOP
+========================================= */
+
+@media only screen and (min-width: 1200px) {
+
+  .project-containers {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding-left: 35px;
+    padding-right: 35px;
+
+    gap: 30px;
+  }
+
+  .project-one {
+    width: 390px;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media only screen and (max-width: 767px) {
+
+  .project-containers {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 24px;
+
+    padding: 20px 18px;
+  }
+
+  .project-one {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .project-img {
+    height: 210px;
+  }
+
+  .project-txt {
+    padding: 20px 17px 18px;
+  }
+
+  .project-txt h2 {
+    font-size: 1.35rem;
+  }
+
+  .project-txt p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .badge-flexx {
+    margin: 18px 0;
+  }
+
+  .badge1 {
+    font-size: 11px;
+    padding: 5px 11px;
+  }
+
+  .viewallbtn {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media only screen and (max-width: 480px) {
+
+  .project-containers {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .project-one {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .project-img {
+    height: 185px;
+  }
+
+  .project-txt {
+    padding: 18px 15px;
+  }
+
+  .project-txt h2 {
+    font-size: 1.25rem;
+  }
+
+  .project-txt p {
+    font-size: 12.5px;
+  }
+
+  .btns-flex {
+    gap: 8px;
+  }
 }

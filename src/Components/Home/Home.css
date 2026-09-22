@@ -39,7 +39,7 @@
     rgba(48, 39, 48, .3) 10%,
     rgba(46, 40, 49, .2) 20%,
     rgba(82, 78, 85, .1) 60%,
-    #322f2f 100%
+    #413046 100%
   );
   border-radius: 50%;
   z-index: 0;
@@ -89,7 +89,11 @@
     margin-bottom: 40px;
 }
 .tag-line p{
-    font-size: 1.1rem;
+  margin: 0;
+    color: rgba(255, 255, 255, 0.62);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
 }
 @media only screen and (min-width: 450px) {
   .bg-circle-center {
