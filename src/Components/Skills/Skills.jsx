@@ -36,13 +36,31 @@ function Skills() {
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
     },
-  };
+  },
+};
+
+  const buttonAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
 
   return (
     <div className="skills-section">
@@ -60,12 +78,16 @@ function Skills() {
       </motion.div>
 
       {/* Simple Tab Buttons */}
-      <div className="grp-btns">
+      <motion.div className="grp-btns"
+      initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  transition={{
+    staggerChildren: 0.05,
+  }}
+      >
         <motion.button
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
+          variants={buttonAnimation}
           onClick={() => setActiveTab("AllSkills")}
           className={`Skill-btns ${activeTab === "AllSkills" ? "active" : ""}`}
         >
@@ -73,10 +95,7 @@ function Skills() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
+           variants={buttonAnimation}
           onClick={() => setActiveTab("Frontend")}
           className={`Skill-btns ${activeTab === "Frontend" ? "active" : ""}`}
         >
@@ -84,10 +103,7 @@ function Skills() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          viewport={{ once: true }}
+          variants={buttonAnimation}
           onClick={() => setActiveTab("Backend")}
           className={`Skill-btns ${activeTab === "Backend" ? "active" : ""}`}
         >
@@ -95,10 +111,7 @@ function Skills() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
+           variants={buttonAnimation}
           onClick={() => setActiveTab("Frameworks")}
           className={`Skill-btns ${activeTab === "Frameworks" ? "active" : ""}`}
         >
@@ -106,10 +119,7 @@ function Skills() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          viewport={{ once: true }}
+           variants={buttonAnimation}
           onClick={() => setActiveTab("Libraries")}
           className={`Skill-btns ${activeTab === "Libraries" ? "active" : ""}`}
         >
@@ -117,10 +127,7 @@ function Skills() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          viewport={{ once: true }}
+           variants={buttonAnimation}
           onClick={() => setActiveTab("Tools")}
           className={`Skill-btns ${activeTab === "Tools" ? "active" : ""}`}
         >
@@ -128,10 +135,7 @@ function Skills() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          viewport={{ once: true }}
+           variants={buttonAnimation}
           onClick={() => setActiveTab("VersionControl")}
           className={`Skill-btns ${activeTab === "VersionControl" ? "active" : ""}`}
         >
@@ -141,16 +145,13 @@ function Skills() {
         
 
         <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          viewport={{ once: true }}
+         variants={buttonAnimation}
           onClick={() => setActiveTab("ProgrammingLanguages")}
           className={`Skill-btns ${activeTab === "ProgrammingLanguages" ? "active" : ""}`}
         >
           Programming
         </motion.button>
-      </div>
+      </motion.div>
 
       {/* Show Content Based on Active Tab */}
       {/* <div className="tab-content">

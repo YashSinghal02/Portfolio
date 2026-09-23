@@ -60,16 +60,10 @@ function Home() {
             animate={{
               opacity: 1,
               scale: 1,
-              y: [0, 0, 0],
             }}
             transition={{
-              opacity: { duration: 1 },
-              scale: { duration: 1 },
-              y: {
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
+              opacity: { duration: 0.8, ease: "easeOut" },
+              scale: { duration: 0.8, ease: "easeOut" },
             }}
           >
             <img src={HomeImg} alt="Yash Singhal" />

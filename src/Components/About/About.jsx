@@ -5,40 +5,41 @@ import { motion } from "motion/react";
 
 function About() {
   const fadeLeft = {
-    hidden: { opacity: 0, x: -80 },
+    hidden: { opacity: 0, x: -40 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: "easeOut",
       },
     },
   };
 
   const fadeRight = {
-    hidden: { opacity: 0, x: 80 },
+    hidden: { opacity: 0, x: 40 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: "easeOut",
-        delay: 0.15,
+        delay: 0.4,
       },
     },
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-      },
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
     },
-  };
+  },
+};
 
   return (
     <section className="about-container" id="about">

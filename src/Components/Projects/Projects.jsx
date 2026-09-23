@@ -14,21 +14,23 @@ import ChitChat from "../../assets/ChitChat.png";
 function Projects() {
   /* ================= Animation Variants ================= */
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
     },
-  };
+  },
+};
 
-  const container = {
+const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.25,
-      delayChildren: 0.2,
+      staggerChildren: 0.08,
     },
   },
 };
@@ -36,20 +38,14 @@ function Projects() {
 const item = {
   hidden: {
     opacity: 0,
-    y: 60,
-    scale: 0.95,
-    rotateX: 8,
-    filter: "blur(4px)",
+    y: 25,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    rotateX: 0,
-    filter: "blur(0px)",
     transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1], // premium cubic bezier
+      duration: 0.35,
+      ease: "easeOut",
     },
   },
 };
@@ -181,10 +177,13 @@ const projects = [
       {/* View All Button */}
       <motion.div
         className="viewallbtn"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
+         initial={{ opacity: 0, y: 15 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.35,
+    ease: "easeOut",
+  }}
+  viewport={{ once: true }}
       >
         <a
           href="https://github.com/YashSinghal02"
