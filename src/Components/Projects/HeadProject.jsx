@@ -5,39 +5,42 @@ import GitBtn from "../Buttons/GitBtn";
 import { motion } from "motion/react";
 
 function HeadProject() {
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -80 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
+ const fadeLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
     },
-  };
+  },
+};
 
-  const fadeRight = {
-    hidden: { opacity: 0, x: 80 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        delay: 0.15,
-      },
+const fadeRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.1,
     },
-  };
+  },
+};
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
     },
-  };
+  },
+};
 
   return (
     <section className="HeadProject-container">
